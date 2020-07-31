@@ -1,3 +1,6 @@
+title: AAOTH
+
+# exclude non-site files
 exclude:
   - LICENSE
   - README.md
