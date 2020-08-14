@@ -1,10 +1,10 @@
 - name: home
   link: /
 - name: music
-  link: /music.html
+  link: /music
 - name: art
-  link: /art.html
+  link: /art
 - name: other
-  link: /other.html
+  link: /other
 - name: about
-  link: /about.html
+  link: /about

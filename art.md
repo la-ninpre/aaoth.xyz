@@ -1,5 +1,6 @@
 ---
 title: art
+permalink: /art/
 ---
 
 # art
