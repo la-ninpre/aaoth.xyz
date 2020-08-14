@@ -10,10 +10,11 @@ html {
 
 body {
 	max-width: fit-content;
+	min-width: 364px;
 	margin: 20px auto 0 auto;
+	padding: 8px;
 	font: 100% $body-font;
 }
-
 a {
 	color: #707070;
 	text-decoration: none;
@@ -52,5 +53,22 @@ footer {
 	font: 75% $body-font;
 	p {
 		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	nav {
+		margin-bottom: 5vh;
+		ul {
+			width: 100%;
+			padding: 0;
+			padding-top: 30px;
+			position: relative;
+			top: 5vh;	
+		}
+		img {
+			position: absolute;
+			top: 0;
+		}
 	}
 }
