@@ -1,0 +1,56 @@
+$main-blue: #397eaf;
+$main-grey: #e1e1e1;
+$border-sep: 5px solid $main-grey;
+$title-font: sans-serif;
+$body-font: sans-serif;
+
+html {
+	background: white;
+}
+
+body {
+	max-width: fit-content;
+	margin: 20px auto 0 auto;
+	font: 100% $body-font;
+}
+
+a {
+	color: #707070;
+	text-decoration: none;
+}
+a:hover {
+	color: #999;
+}
+
+nav {
+	display: flex;
+	font: 400 1.5em $title-font;
+	letter-spacing: -1.2px;
+	
+	ul {
+		display: inline-flex;
+		width: 430px;
+		height: 32px;
+		margin: 0;
+		padding: 50px 30px 0 0;
+		flex-direction: row;
+		justify-content: space-between;
+		list-style-type: none;
+		border-bottom: 5px solid $main-grey;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font: 200% $title-font;
+	color: $main-blue;
+}
+
+footer {
+	border-top: $border-sep;
+	text-align: center;
+	font: 75% $body-font;
+	p {
+		margin: 0;
+	}
+}
