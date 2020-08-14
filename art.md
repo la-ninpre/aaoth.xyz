@@ -1,0 +1,7 @@
+---
+title: art
+---
+
+# art
+
+here i'll show some graphical stuff
