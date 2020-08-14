@@ -1,6 +1,12 @@
-title: AAOTH
+title: aaoth
 
 # exclude non-site files
 exclude:
   - LICENSE
   - README.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
