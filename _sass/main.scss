@@ -60,6 +60,24 @@ h1, h2, h3, h4, h5, h6 {
 	color: $color-main-blue;
 }
 
+.post {
+    padding: 1em;
+    margin: 1em;
+    background: #1f1f1f;
+    border-radius: 25px 25px 25px 0px;
+    word-wrap: break-word;
+    p {
+        img {
+            max-width: 100%
+        }
+    }
+}
+
+audio {
+    width: 100%;
+    border-radius: 25px;
+}
+
 footer {
 	border-top: $border-main;
 	text-align: center;
