@@ -13,6 +13,7 @@ $border-nav: $border-main $color-main-grey;
 $border-dark: $border-main $color-dark-grey;
 $font-title: Montserrat, sans-serif;
 $body-font: Lato, sans-serif;
+$code-font: Fira Code, monospace;
 
 html {
 	background: $color-main-bg;
@@ -88,6 +89,10 @@ blockquote {
     border-color: $color-main-grey;
     border-style: solid;
     border-radius: 0.5em;
+}
+
+code {
+    font-family: $code-font;
 }
 
 audio {
