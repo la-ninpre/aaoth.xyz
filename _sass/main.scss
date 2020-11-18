@@ -3,14 +3,16 @@ $color-dark-bg: #070707;
 $color-main-blue: #397eaf;
 $color-dark-blue: #2e4054;
 $color-main-grey: #e1e1e1;
+$color-main-grey-dark: #c4c4c4;
 $color-dark-grey: #1f1f1f;
 $color-link-idle: #707070;
 $color-link-hover: #999999;
 $color-nav-current: #333333;
-$border-main: 5px solid $color-main-grey;
-$border-dark: 5px solid $color-dark-grey;
-$font-title: sans-serif;
-$body-font: sans-serif;
+$border-main: 5px solid;
+$border-nav: $border-main $color-main-grey;
+$border-dark: $border-main $color-dark-grey;
+$font-title: Montserrat, sans-serif;
+$body-font: Lato, sans-serif;
 
 html {
 	background: $color-main-bg;
@@ -50,27 +52,42 @@ nav {
 		flex-direction: row;
 		justify-content: space-between;
 		list-style-type: none;
-		border-bottom: $border-main;
+		border-bottom: $border-nav;
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	font: 200% $font-title;
-	color: $color-main-blue;
+    color: $color-main-blue;
+	font-family: $font-title;
+    font-weight: 500;
 }
 
 .post {
     padding: 1em;
-    margin: 1em;
+    margin: 1em 0;
     background: $color-main-grey;
     border-radius: 25px 25px 25px 0px;
     word-wrap: break-word;
     p {
+        margin-top: 0.15em;
         img {
-            max-width: 100%
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 1em;
         }
     }
+}
+
+blockquote {
+    margin: 0.5em;
+    padding: 1em;
+    background: $color-main-grey-dark;
+    border-width: 2px 2px 2px 5px;
+    border-color: $color-main-grey;
+    border-style: solid;
+    border-radius: 0.5em;
 }
 
 audio {
@@ -79,7 +96,7 @@ audio {
 }
 
 footer {
-	border-top: $border-main;
+	border-top: $border-nav;
 	text-align: center;
 	font: 75% $body-font;
 	p {
@@ -105,21 +122,25 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
-	html {
-		background: $color-dark-bg;
-	}
-	body {
-		color: $color-main-bg;
-	}
-	nav {
-		ul {
-			border-bottom: $border-dark;
-		}
-	}
+    html {
+        background: $color-dark-bg;
+    }
+    body {
+        color: $color-main-bg;
+    }
+    nav {
+        ul {
+            border-bottom: $border-dark;
+        }
+    }
     .post {
         background: $color-dark-grey;
     }
-	footer {
-		border-top: $border-dark;
-	}
+    footer {
+        border-top: $border-dark;
+    }
+    blockquote {
+        background: $color-nav-current;
+        border-color: $color-dark-grey;
+    }
 }
