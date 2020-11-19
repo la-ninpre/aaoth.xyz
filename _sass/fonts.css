@@ -15,8 +15,36 @@
     font-weight: 500;
     font-style: normal;
     src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2"),
-         url("/assets/fonts/Montserrat-Medium.woff") format("woff");
+    url("/assets/fonts/Montserrat-Medium.woff") format("woff");
 }
+
+/** Montserrat Regular-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: italic;
+    src: url("/assets/fonts/Montserrat-Italic.woff2") format("woff2"),
+    url("/assets/fonts/Montserrat-Italic.woff") format("woff");
+}
+
+/** Montserrat Bold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Montserrat-Bold.woff") format("woff");
+}
+
+/** Montserrat Bold-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: italic;
+    src: url("/assets/fonts/Montserrat-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/Montserrat-BoldItalic.woff") format("woff");
+}
+
 
 /** ==================== LATO ======================== **/
 
@@ -29,10 +57,45 @@
          url('/assets/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
          url('/assets/fonts/Lato-Regular.ttf') format('truetype');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     text-rendering: optimizeLegibility;
 }
 
+/* Webfont: Lato-Italic */@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/fonts/Lato-Italic.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/fonts/Lato-Italic.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/fonts/Lato-Italic.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/fonts/Lato-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Bold */@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/fonts/Lato-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/fonts/Lato-Bold.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/fonts/Lato-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-BoldItalic */@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/fonts/Lato-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/fonts/Lato-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/fonts/Lato-BoldItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/fonts/Lato-BoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
 /** =================== FIRA CODE ===================== **/
 
 @font-face {
