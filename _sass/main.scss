@@ -5,6 +5,7 @@ $color-dark-blue: #2e4054;
 $color-main-grey: #e1e1e1;
 $color-main-grey-dark: #c4c4c4;
 $color-dark-grey: #1f1f1f;
+$color-darker-grey: #101010;
 $color-link-idle: #707070;
 $color-link-hover: #999999;
 $color-nav-current: #333333;
@@ -67,11 +68,14 @@ h1, h2, h3, h4, h5, h6 {
 .post {
     padding: 1em;
     margin: 1em 0;
-    background: $color-main-grey;
+    //background: $color-main-grey;
     border-radius: 25px 25px 25px 0px;
+    border: 1px solid $color-main-grey;
     word-wrap: break-word;
+    small p {
+        display: inline;
+    }
     p {
-        margin-top: 0.15em;
         img {
             display: block;
             max-width: 100%;
@@ -80,6 +84,25 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+.post-page .post-header {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        li {
+            margin-right: 0.5em;
+            a {
+                background: $color-main-grey;
+                border-radius: 5px;
+                padding: 2px;
+            }
+        }
+    }
+}
+
 
 blockquote {
     margin: 0.5em;
@@ -93,6 +116,18 @@ blockquote {
 
 code {
     font-family: $code-font;
+    font-size: 0.9em;
+    &.language-plaintext.highlighter-rouge {
+        background: $color-darker-grey;
+        padding: 2px;
+        border-radius: 5px;
+    }
+}
+div.language-plaintext.highlighter-rouge {
+    overflow-x: auto;
+    background: $color-main-grey;
+    padding-left: 0.5em;
+    border-radius: 5px;
 }
 
 audio {
@@ -101,6 +136,7 @@ audio {
 }
 
 footer {
+    padding-top: 0.5em;
 	border-top: $border-nav;
 	text-align: center;
 	font: 75% $body-font;
@@ -138,9 +174,20 @@ footer {
             border-bottom: $border-dark;
         }
     }
+    code.language-plaintext {
+        background: $color-darker-grey;
+    }
+    div.language-plaintext.highlighter-rouge {
+        background: $color-darker-grey;
+    }
     .post {
+        //background: $color-dark-grey;
+        border: 1px solid $color-dark-grey;
+    }
+    .post-page .post-header ul li a {
         background: $color-dark-grey;
     }
+
     footer {
         border-top: $border-dark;
     }

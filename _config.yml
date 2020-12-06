@@ -6,7 +6,13 @@ exclude:
   - README.md
 
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
