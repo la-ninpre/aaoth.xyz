@@ -1,5 +1,6 @@
 ---
 title: other
+permalink: /other/
 ---
 
 miscellaneous posts about different things.
