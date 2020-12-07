@@ -1,6 +1,5 @@
 ---
 title: home
 ---
-# wait
 
-There's nothing yet, but soon
+there's nothing yet, but soon

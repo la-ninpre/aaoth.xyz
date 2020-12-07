@@ -1,0 +1,21 @@
+- name: github
+  link: https://github.com/la-ninpre
+  type: github
+- name: youtube
+  link: https://www.youtube.com/channel/UCLW6sGRLddTR-fB-Ae5uv6Q/
+  type: youtube
+- name: cgit
+  link: https://git.aaoth.xyz
+  type: git
+- name: fossil
+  link: https://fsl.aaoth.xyz
+  type: fsl
+- name: aaoth
+  link: https://aaoth.bandcamp.com
+  type: bandcamp
+- name: spiral materivm 
+  link: https://spiralmaterivm.bandcamp.com
+  type: bandcamp
+- name: hälsorisk
+  link: https://haelsorisk.bandcamp.com
+  type: bandcamp
