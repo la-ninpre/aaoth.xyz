@@ -118,7 +118,7 @@ code {
     font-family: $code-font;
     font-size: 0.9em;
     &.language-plaintext.highlighter-rouge {
-        background: $color-darker-grey;
+        background: $color-main-grey;
         padding: 2px;
         border-radius: 5px;
     }
@@ -181,7 +181,6 @@ footer {
         background: $color-darker-grey;
     }
     .post {
-        //background: $color-dark-grey;
         border: 1px solid $color-dark-grey;
     }
     .post-page .post-header ul li a {
