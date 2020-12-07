@@ -68,9 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 .post {
     padding: 1em;
     margin: 1em 0;
-    //background: $color-main-grey;
     border-radius: 25px 25px 25px 0px;
-    border: 1px solid $color-main-grey;
+    border: 2px solid $color-main-grey;
     word-wrap: break-word;
     small p {
         display: inline;
@@ -174,14 +173,14 @@ footer {
             border-bottom: $border-dark;
         }
     }
-    code.language-plaintext {
+    code.language-plaintext.highlighter-rouge {
         background: $color-darker-grey;
     }
     div.language-plaintext.highlighter-rouge {
         background: $color-darker-grey;
     }
     .post {
-        border: 1px solid $color-dark-grey;
+        border: 2px solid $color-dark-grey;
     }
     .post-page .post-header ul li a {
         background: $color-dark-grey;
