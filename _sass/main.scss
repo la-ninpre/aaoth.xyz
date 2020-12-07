@@ -22,7 +22,7 @@ html {
 
 body {
 	max-width: 835px;
-	min-width: 364px;
+	min-width: 462px;
 	margin: 20px auto 0 auto;
 	padding: 8px;
 	color: $color-dark-bg;
@@ -178,6 +178,9 @@ footer {
 }
 
 @media only screen and (max-width: 760px) {
+    body p {
+        padding-top: 1em;
+    }
 	nav {
 		margin-bottom: 5vh;
 		ul {
@@ -193,8 +196,26 @@ footer {
 		}
 	}
     .about {
+        flex-direction: column-reverse;
+        .about-sidebar {
+            display: flex;
+        }
         .about-info {
             padding: 0 2%;
+        }
+        .about-links {
+            margin-top: 0;
+            p:first-child {
+                margin: 0;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                li {
+                    margin-right: auto;
+                }
+            }
         }
     }
 }
