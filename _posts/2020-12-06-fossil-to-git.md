@@ -2,6 +2,7 @@
 title: fossil export to git
 author: la-ninpre
 tags: [fossil, git, tutorial]
+excerpt_separator: <!--more-->
 ---
 
 i was trying to export my website repo to fossil using suggested method from
@@ -14,6 +15,8 @@ git fast-export --all | fossil import --git repo.fossil
 
 but i didn't like that fossil recognizes my email as username and so commit
 messages user was `user@example.com` instead of `user`.
+
+<!--more-->
 
 i then read a bit about options of `git fast-export` and found `--anonymize`
 flag. but it's results weren't satisfying either.
@@ -49,3 +52,17 @@ author user <user>
 ```
 
 which is odd, but fine for fossil import.
+
+---
+
+update: i tested this on a bigger repo with older history and found that this
+regexp was not perfect, i updated it to handle situations like
+`user@example.co.uk` and also names that consist of more than one word.
+
+```
+git fast-export --all | \
+    sed -E 's/^((author)|(committer))[[:blank:]]+([[:graph:]]+([[:blank:]]+[[:graph:]]+)*)[[:blank:]]+(<[[:graph:]]+@[[:graph:]]+(\.[[:graph:]]+)+>)/\1 \4<\4>/' | \
+    fossil import --git repo.fossil
+```
+
+it's veery evil looking horrible thing, but it works.
