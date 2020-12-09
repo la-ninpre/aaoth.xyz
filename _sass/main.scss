@@ -22,7 +22,7 @@ html {
 
 body {
 	max-width: 835px;
-	min-width: 462px;
+	min-width: 378px;
 	margin: 20px auto 0 auto;
 	padding: 8px;
 	color: $color-dark-bg;
@@ -85,7 +85,7 @@ ul {
     .about-links {
         margin-top: 1em;
         .link-icon {
-            height: 32px;
+            width: 32px;
         }
         .link-text {
             display: inline;
@@ -199,21 +199,24 @@ footer {
         flex-direction: column-reverse;
         .about-sidebar {
             display: flex;
-        }
-        .about-info {
-            padding: 0 2%;
+            flex-direction: column;
+            img {
+                width: 128px;
+                margin: 0 auto;
+            }
         }
         .about-links {
             margin-top: 0;
             p:first-child {
                 margin: 0;
+                padding-top: 0;
             }
             ul {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 li {
-                    margin-right: auto;
+                    margin: auto;
                 }
             }
         }
