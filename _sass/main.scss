@@ -181,6 +181,9 @@ footer {
     body p {
         padding-top: 1em;
     }
+    footer p {
+        padding: 0;
+    }
 	nav {
 		margin-bottom: 5vh;
 		ul {
@@ -212,11 +215,12 @@ footer {
                 padding-top: 0;
             }
             ul {
+                padding-top: 1em;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-start;
                 li {
                     margin: auto;
+                    padding: 0 0.5em;
                 }
             }
         }
