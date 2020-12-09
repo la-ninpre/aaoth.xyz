@@ -5,6 +5,8 @@ exclude:
   - LICENSE
   - README.md
 
+excerpt_separator: <!--more-->
+
 defaults:
   -
     scope:

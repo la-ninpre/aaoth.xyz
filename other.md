@@ -3,7 +3,9 @@ title: other
 permalink: /other/
 ---
 
-miscellaneous posts about different things.
+# miscellaneous posts
+
+about different things
 
 filter by tag: {% for tag in site.tags %}[{{ tag[0] }}](/tags/{{ tag[0] }})
 {% endfor %}

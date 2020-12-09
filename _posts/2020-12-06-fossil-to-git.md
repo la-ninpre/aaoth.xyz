@@ -1,8 +1,7 @@
 ---
 title: fossil export to git
 author: la-ninpre
-tags: [fossil, git, tutorial]
-excerpt_separator: <!--more-->
+tags: fossil git tutorial
 ---
 
 i was trying to export my website repo to fossil using suggested method from
@@ -11,6 +10,7 @@ i was trying to export my website repo to fossil using suggested method from
 ```
 git fast-export --all | fossil import --git repo.fossil
 ```
+
 [1]:https://www.fossil-scm.org/home/doc/trunk/www/inout.wiki
 
 but i didn't like that fossil recognizes my email as username and so commit
