@@ -1,5 +1,8 @@
 title: aaoth
 
+plugins:
+  - jekyll-feed
+
 # exclude non-site files
 exclude:
   - LICENSE
