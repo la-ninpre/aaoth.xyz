@@ -1,6 +1,6 @@
 ---
-title: other
-permalink: /other/
+title: blog
+permalink: /blog/
 ---
 
 # miscellaneous posts
