@@ -120,18 +120,24 @@ ul {
     }
 }
 
-.post-page .post-header {
-    ul {
-        display: flex;
-        flex-direction: row;
-        li {
-            margin-right: 0.5em;
-            a {
-                background: $color-main-grey;
-                border-radius: 5px;
-                padding: 2px;
+.post-page {
+    .post-header {
+        ul {
+            display: flex;
+            flex-direction: row;
+            li {
+                margin-right: 0.5em;
+                a {
+                    background: $color-main-grey;
+                    border-radius: 5px;
+                    padding: 2px;
+                }
             }
         }
+    }
+    
+    ul {
+        padding-left: 20px;
     }
 }
 
@@ -149,17 +155,18 @@ blockquote {
 code {
     font-family: $code-font;
     font-size: 0.9em;
-    &.language-plaintext.highlighter-rouge {
-        background: $color-main-grey;
-        padding: 2px;
-        border-radius: 5px;
-    }
+    background: $color-main-grey;
+    padding: 2px;
+    border-radius: 5px;
 }
-div.language-plaintext.highlighter-rouge {
+div.highlight {
     overflow-x: auto;
     background: $color-main-grey;
     padding-left: 0.5em;
     border-radius: 5px;
+    code {
+        padding: 0;
+    }
 }
 
 audio {
@@ -239,10 +246,10 @@ footer {
             border-bottom: $border-dark;
         }
     }
-    code.language-plaintext.highlighter-rouge {
+    code {
         background: $color-darker-grey;
     }
-    div.language-plaintext.highlighter-rouge {
+    div.highlight {
         background: $color-darker-grey;
     }
     .post {
