@@ -17,50 +17,50 @@ $body-font: Lato, sans-serif;
 $code-font: Fira Code, monospace;
 
 html {
-	background: $color-main-bg;
+    background: $color-main-bg;
 }
 
 body {
-	max-width: 835px;
-	min-width: 378px;
-	margin: 20px auto 0 auto;
-	padding: 8px;
-	color: $color-dark-bg;
-	font: 100% $body-font;
+    max-width: 835px;
+    min-width: 378px;
+    margin: 20px auto 0 auto;
+    padding: 8px;
+    color: $color-dark-bg;
+    font: 100% $body-font;
 }
 a {
-	color: $color-link-idle;
-	text-decoration: none;
+    color: $color-link-idle;
+    text-decoration: none;
 }
 a:hover {
-	color: $color-link-hover;
+    color: $color-link-hover;
 }
 
 .current {
-	color: $color-nav-current;
+    color: $color-nav-current;
     pointer-events: none;
 }
 
 nav {
-	display: flex;
-	font: 400 1.5em $font-title;
-	letter-spacing: -1.2px;
+    display: flex;
+    font: 400 1.5em $font-title;
+    letter-spacing: -1.2px;
 
-	ul {
-		display: inline-flex;
-		width: 430px;
-		height: 32px;
-		padding: 50px 30px 0 0;
-		flex-direction: row;
-		justify-content: space-between;
-		border-bottom: $border-nav;
-	}
+    ul {
+        display: inline-flex;
+        width: 430px;
+        height: 32px;
+        padding: 50px 30px 0 0;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: $border-nav;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
+    margin: 0;
     color: $color-main-blue;
-	font-family: $font-title;
+    font-family: $font-title;
     font-weight: 500;
 }
 
@@ -136,7 +136,7 @@ ul {
             }
         }
     }
-    
+
     ul {
         padding-left: 20px;
     }
@@ -177,12 +177,12 @@ audio {
 
 footer {
     padding-top: 0.5em;
-	border-top: $border-nav;
-	text-align: center;
-	font: 75% $body-font;
-	p {
-		margin: 0;
-	}
+    border-top: $border-nav;
+    text-align: center;
+    font: 75% $body-font;
+    p {
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 760px) {
@@ -192,20 +192,20 @@ footer {
     footer p {
         padding: 0;
     }
-	nav {
-		margin-bottom: 5vh;
-		ul {
-			width: 100%;
-			padding: 0;
-			padding-top: 30px;
-			position: relative;
-			top: 5vh;
-		}
-		img {
-			position: absolute;
-			top: 0;
-		}
-	}
+    nav {
+        margin-bottom: 5vh;
+        ul {
+            width: 100%;
+            padding: 0;
+            padding-top: 30px;
+            position: relative;
+            top: 5vh;
+        }
+        img {
+            position: absolute;
+            top: 0;
+        }
+    }
     .about {
         flex-direction: column-reverse;
         .about-sidebar {
