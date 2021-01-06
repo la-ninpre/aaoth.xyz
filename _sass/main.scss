@@ -38,6 +38,7 @@ a:hover {
 
 .current {
 	color: $color-nav-current;
+    pointer-events: none;
 }
 
 nav {
