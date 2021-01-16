@@ -1,10 +1,8 @@
 - name: home
   link: /
+- name: blog
+  link: /blog/
 - name: music
   link: /music/
 - name: art
   link: /art/
-- name: blog
-  link: /blog/
-- name: about
-  link: /about/
