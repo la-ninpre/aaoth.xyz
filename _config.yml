@@ -11,13 +11,22 @@ exclude:
 excerpt_separator: <!--more-->
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+
+  - scope:
       path: "_posts"
     values:
       layout: "post"
+
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+  - scope:
+      path: "assets/img/art"
+    values:
+      art: true

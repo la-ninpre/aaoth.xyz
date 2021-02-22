@@ -3,10 +3,6 @@ title: blog
 permalink: /blog/
 ---
 
-# miscellaneous posts
-
-about different things
-
 filter by tag: {% for tag in site.tags %}[{{ tag[0] }}](/tags/{{ tag[0] }})
 {% endfor %}
 

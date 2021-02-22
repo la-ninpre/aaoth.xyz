@@ -9,6 +9,7 @@ $color-darker-grey: #101010;
 $color-link-idle: #707070;
 $color-link-hover: #999999;
 $color-nav-current: #333333;
+$nav-alpha: 0.95;
 $border-main: 5px solid;
 $border-nav: $border-main $color-main-grey;
 $border-dark: $border-main $color-dark-grey;
@@ -23,7 +24,7 @@ html {
 body {
     max-width: 835px;
     min-width: 378px;
-    margin: 20px auto 0 auto;
+    margin: 0 auto;
     padding: 8px;
     color: $color-dark-bg;
     font: 100% $body-font;
@@ -39,12 +40,23 @@ a:hover {
 .current {
     color: $color-nav-current;
     pointer-events: none;
+    font-weight: 500;
 }
 
 nav {
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 843px;
+    height: 102px;
     font: 400 1.5em $font-title;
     letter-spacing: -1.2px;
+    background: rgba($color-main-bg, $nav-alpha);
+    
+    img {
+        margin-right: 8px;
+    }
 
     ul {
         display: inline-flex;
@@ -72,8 +84,11 @@ ul {
     }
 }
 
+.content {
+    margin-top: 95px;
+}
+
 .about {
-    padding: 1em 0;
     display: flex;
     flex-direction: row;
     img#avatar {
@@ -122,9 +137,12 @@ ul {
 }
 
 .post-page {
+    margin-bottom: 10px;
     .post-header {
+        height: 4em;
         ul {
             display: flex;
+            float: right;
             flex-direction: row;
             li {
                 margin-right: 0.5em;
@@ -138,7 +156,20 @@ ul {
     }
 
     ul {
-        padding-left: 20px;
+        padding-left: 10px;
+    }
+}
+
+.art {
+    display: flex;
+    flex-flow: row wrap;
+
+    .art-img {
+        img {
+            width: 100%;
+            height: auto;
+            image-orientation: from-image;
+        }
     }
 }
 
@@ -186,18 +217,15 @@ footer {
 }
 
 @media only screen and (max-width: 760px) {
-    body p {
-        padding-top: 1em;
-    }
     footer p {
         padding: 0;
     }
     nav {
         margin-bottom: 5vh;
+        height: 130px;
         ul {
             width: 100%;
-            padding: 0;
-            padding-top: 30px;
+            padding-top: 48px;
             position: relative;
             top: 5vh;
         }
@@ -205,6 +233,9 @@ footer {
             position: absolute;
             top: 0;
         }
+    }
+    .content {
+        margin-top: 140px;
     }
     .about {
         flex-direction: column-reverse;
@@ -243,6 +274,7 @@ footer {
         color: $color-main-bg;
     }
     nav {
+        background: rgba($color-dark-bg, $nav-alpha);
         ul {
             border-bottom: $border-dark;
         }
