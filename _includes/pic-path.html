@@ -1,0 +1,8 @@
+{%- capture arts -%}
+{%- for file in site.static_files -%}
+    {%- if file.art and file.path contains page.title -%}
+        {{ file.path }}
+    {% endif %}
+{%- endfor -%}
+{%- endcapture -%}
+{% assign artpics = arts | split: " " %}

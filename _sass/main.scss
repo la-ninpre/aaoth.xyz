@@ -160,6 +160,19 @@ ul {
     }
 }
 
+.art-menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    .art-category {
+        img {
+           width: 100%;
+           height: auto;
+        }
+    }
+}
+
 .art {
     display: flex;
     flex-flow: row wrap;

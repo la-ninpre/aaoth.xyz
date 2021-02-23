@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+{%- include pic-path.html -%} <!-- provides artpics array -->
+
+<div class="art">
+{%- for imgpath in artpics -%}
+    {% assign imgname = imgpath | split: "/" | last | split: "." | first %}
+    <div class="art-img">
+        <img src="{{ imgpath }}" alt="{{ imgname }}">
+    </div>
+{% endfor %}
+</div>

@@ -1,0 +1,22 @@
+<div class="art-menu">
+{%- for page in site.pages -%}
+    {%- assign pagedir = page.dir | remove_first: "/" | split: "/" -%}
+    {%- capture arts -%}
+    {%- for file in site.static_files -%}
+        {%- if file.art and file.path contains page.title -%}
+            {{ file.path }}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- endcapture -%}
+    {% assign artpics = arts | strip_newlines | split: " " %}
+    {%- if pagedir.first == "art" and pagedir.size > 1 -%}
+    <div class="art-category">
+        <a href="{{ page.url }}">
+            {{ page.title }}
+            <br>
+            <img src="{{ artpics.first }}">
+        </a> 
+    </div>
+    {% endif %}
+{%- endfor -%}
+</div>
