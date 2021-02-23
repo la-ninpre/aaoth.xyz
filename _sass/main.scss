@@ -10,6 +10,7 @@ $color-link-idle: #707070;
 $color-link-hover: #999999;
 $color-nav-current: #333333;
 $nav-alpha: 0.95;
+$body-width: 835px;
 $border-main: 5px solid;
 $border-nav: $border-main $color-main-grey;
 $border-dark: $border-main $color-dark-grey;
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-    max-width: 835px;
+    max-width: $body-width;
     min-width: 378px;
     margin: 0 auto;
     padding: 8px;
@@ -46,6 +47,7 @@ a:hover {
 nav {
     display: flex;
     position: fixed;
+    z-index: 10;
     top: 0;
     width: 100%;
     max-width: 843px;
@@ -161,14 +163,51 @@ ul {
 }
 
 .art-menu {
+    $art-thumb-wt: ($body-width / 2) - 16;
+    $art-thumb-ht: 300px;
+    //$art-thumb-ht: $art-thumb-wt;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-around;
+    align-content: center;
     .art-category {
-        img {
-           width: 100%;
-           height: auto;
+        margin-bottom: 1em;
+        .link-mask {
+            position: absolute;
+            z-index: 1;
+            width: $art-thumb-wt;
+            height: $art-thumb-ht;
+            line-height: $art-thumb-ht - 16;
+            text-align: center;
+            background: $color-main-bg;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+            font-size: 200%;
+            color: $color-dark-bg;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        .thumbnail {
+            width: $art-thumb-wt;
+            height: $art-thumb-ht;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                image-orientation: initial;
+                object-fit: cover;
+            }
         }
     }
 }
@@ -294,6 +333,10 @@ footer {
     }
     code {
         background: $color-darker-grey;
+    }
+    .art-menu .art-category .link-mask {
+        background: $color-dark-bg;
+        color: $color-main-bg;
     }
     div.highlight {
         background: $color-darker-grey;
