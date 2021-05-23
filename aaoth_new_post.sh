@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# quick and dirty script to add new posts to aaoth.xyz
+
 SITE_DIR="$HOME/Documents/aaoth.xyz"
 POSTS_DIR="$SITE_DIR/_posts"
 
@@ -7,6 +9,8 @@ DATE_SHORT=$(date -I)
 DATE_LONG=$(date -Isec)
 
 usage() {
+    echo "add a post to aaoth.xyz"
+    echo
     echo "usage:"
     echo "  $0 [OPTIONS]"
     echo
