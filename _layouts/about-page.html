@@ -4,27 +4,33 @@ layout: default
 
 <div class="about">
     <div class="about-sidebar">
-    <img id="avatar" alt="aaoth-photo" src="/assets/img/aaoth-photo.jpeg">
-    <div class="about-links">
-        <p>other links:</p>
-        <ul>
-    {% assign sorted_links = site.data.links | sort: "type" %}
-        {% for link in sorted_links %}
-        <li>
-            <a href="{{ link.link }}">
-            <img 
-                class= "link-icon"
-                alt="{{ link.type }}"
-                src="/assets/img/{{ link.type }}-icon.png">
-            <div class="link-text">{{ link.name }}</div>
-            </a>
-        </li>
-        {% endfor %}
-        </ul>
-    </div>
+        <img id="avatar" alt="aaoth-photo" src="/assets/img/aaoth-photo.jpeg">
+        <div class="about-links">
+            <p>other links:</p>
+            <ul>
+                {% assign sorted_links = site.data.links | sort: "type" %}
+                {% for link in sorted_links %}
+                <li>
+                    <a href="{{ link.link }}">
+                        <img 
+                       class= "link-icon"
+                       alt="{{ link.type }}"
+                       src="/assets/img/{{ link.type }}-icon.png">
+                        <div class="link-text">{{ link.name }}</div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
     <div class="about-info">
         {{ content }}
+        <div class="latest-post">
+            <h2>latest post</h2>
+            {% assign post = site.posts[0] %}
+            {% include post-preview.html %}
+        </div>
     </div>
 </div>
+
