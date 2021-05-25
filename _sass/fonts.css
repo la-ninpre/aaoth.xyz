@@ -7,6 +7,7 @@
     font-style: normal;
     src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2"),
          url("/assets/fonts/Montserrat-Regular.woff") format("woff");
+    font-display: swap;
 }
 
 /** Montserrat Medium **/
@@ -16,6 +17,7 @@
     font-style: normal;
     src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2"),
     url("/assets/fonts/Montserrat-Medium.woff") format("woff");
+    font-display: swap;
 }
 
 /** Montserrat Regular-Italic **/
@@ -25,6 +27,7 @@
     font-style: italic;
     src: url("/assets/fonts/Montserrat-Italic.woff2") format("woff2"),
     url("/assets/fonts/Montserrat-Italic.woff") format("woff");
+    font-display: swap;
 }
 
 /** Montserrat Bold **/
@@ -34,6 +37,7 @@
     font-style: normal;
     src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2"),
     url("/assets/fonts/Montserrat-Bold.woff") format("woff");
+    font-display: swap;
 }
 
 /** Montserrat Bold-Italic **/
@@ -43,6 +47,7 @@
     font-style: italic;
     src: url("/assets/fonts/Montserrat-BoldItalic.woff2") format("woff2"),
     url("/assets/fonts/Montserrat-BoldItalic.woff") format("woff");
+    font-display: swap;
 }
 
 
@@ -59,6 +64,7 @@
     font-style: normal;
     font-weight: 400;
     text-rendering: optimizeLegibility;
+    font-display: swap;
 }
 
 /* Webfont: Lato-Italic */@font-face {
@@ -71,6 +77,7 @@
     font-style: italic;
     font-weight: 400;
     text-rendering: optimizeLegibility;
+    font-display: swap;
 }
 
 /* Webfont: Lato-Bold */@font-face {
@@ -83,6 +90,7 @@
     font-style: normal;
     font-weight: 700;
     text-rendering: optimizeLegibility;
+    font-display: swap;
 }
 
 /* Webfont: Lato-BoldItalic */@font-face {
@@ -95,45 +103,51 @@
     font-style: italic;
     font-weight: 700;
     text-rendering: optimizeLegibility;
+    font-display: swap;
 }
 /** =================== FIRA CODE ===================== **/
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('/assets/fonts/FiraCode-Light.woff2') format('woff2'),
-    url("/assets/fonts/FiraCode-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Light.woff2') format('woff2'),
+        url("/assets/fonts/FiraCode-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2'),
-    url("/assets/fonts/FiraCode-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2'),
+        url("/assets/fonts/FiraCode-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2'),
-    url("/assets/fonts/FiraCode-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2'),
+        url("/assets/fonts/FiraCode-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('/assets/fonts/FiraCode-SemiBold.woff2') format('woff2'),
-    url("/assets/fonts/FiraCode-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-SemiBold.woff2') format('woff2'),
+        url("/assets/fonts/FiraCode-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('/assets/fonts/FiraCode-Bold.woff2') format('woff2'),
-    url("/assets/fonts/FiraCode-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Bold.woff2') format('woff2'),
+        url("/assets/fonts/FiraCode-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
