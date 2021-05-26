@@ -7,6 +7,7 @@ plugins:
 exclude:
   - LICENSE
   - README.md
+  - art/thumbs.sh
 
 excerpt_separator: <!--more-->
 
@@ -30,3 +31,9 @@ defaults:
       path: "art"
     values:
       art: true
+
+  - scope:
+      path: "art/*/thumbs"
+    values:
+      thumbnail: true
+

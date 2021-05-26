@@ -1,12 +1,12 @@
 <ul class="art-menu">
 {%- for page in site.pages -%}
-    {%- assign pagedir = page.dir | remove_first: "/" | split: "/" -%}
     {%- include pic-path.html -%}
+    {%- assign pagedir = page.dir | remove_first: "/" | split: "/" -%}
     {%- if pagedir.first == "art" and pagedir.size > 1 -%}
     <li class="art-category">
         <a class="link-mask" href="{{ page.url }}">{{ page.title }}</a>
         <div class="thumbnail">
-            <img src="{{ artpics.first }}">
+            <img src="{{ artthumbs.first }}">
         </div>
     </li>
     {% endif %}

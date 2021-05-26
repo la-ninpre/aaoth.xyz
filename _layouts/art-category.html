@@ -6,13 +6,21 @@ layout: default
 
 {{ content }}
 
-{%- include pic-path.html -%} <!-- provides artpics array -->
+{%- include pic-path.html -%}
+{% comment %}
+    upper include provides `artpics` array 
+    and `artthumbs` array, which are used later
+{% endcomment %}
 
 <div class="art">
-{%- for imgpath in artpics -%}
-    {% assign imgname = imgpath | split: "/" | last | split: "." | first %}
+{%- assign pics_n = artpics.size -%}
+{%- assign range = (0..pics_n) -%}
+{%- for i in range -%}
+    {%- assign imgname = artpics[i] | split: "/" | last | split: "." | first -%}
     <div class="art-img">
-        <img src="{{ imgpath }}" alt="{{ imgname }}">
+        <a href="{{ artpics[i] }}" target="_blank">
+            <img src="{{ artthumbs[i] }}" alt="{{ imgname }}">
+        </a>
     </div>
 {% endfor %}
 </div>
