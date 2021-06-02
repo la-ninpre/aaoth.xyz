@@ -24,13 +24,13 @@ usage() {
 }
 
 read_title() {
-    echo -n "new post title: "
-    read TITLE
+    echo "new post title: "
+    read -r TITLE
 }
 
 read_tags() {
-    echo -n "new post tags: "
-    read TAGS
+    echo "new post tags: "
+    read -r TAGS
 }
 
 create_tag_page() {
@@ -44,7 +44,7 @@ permalink: /tags/$1/
 TAG
 }
 
-cd $SITE_DIR
+cd "$SITE_DIR" || exit 1
 
 # if there are no arguments specified, run interactively
 if [ $# -gt 0 ]
@@ -79,7 +79,7 @@ fi
 [ -z "$TAGS" ] && read_tags
 [ -z "$TAGS" ] && echo "specify at least one tag" && exit 1
 
-TITLE_FILE=$(echo $TITLE | tr '[A-Z]' '[a-z]' | sed 's/ /-/g')
+TITLE_FILE=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 POST_FILENAME="$POSTS_DIR/$DATE_SHORT-$TITLE_FILE.md"
 
@@ -87,7 +87,7 @@ for _tag in $TAGS
 do
     [ ! -f "./tags/$_tag.md" ] \
         && echo "tag $_tag is not present, creating one" \
-        && create_tag_page $_tag
+        && create_tag_page "$_tag"
 done
 
 # template is currently hardcoded
@@ -103,4 +103,4 @@ tags: $TAGS
 
 EOF
 
-nvim -c "normal 6jo" -c "startinsert" $POST_FILENAME
+nvim -c "normal 6jo" -c "startinsert" "$POST_FILENAME"
