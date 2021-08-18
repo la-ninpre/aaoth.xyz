@@ -9,6 +9,14 @@ exclude:
   - README.md
   - art/thumbs.sh
 
+collections:
+  music_releases:
+
+  music_projects:
+    output: true
+    permalink: /music/:title
+    sort_by: start_date
+
 excerpt_separator: <!--more-->
 
 defaults:
@@ -21,6 +29,11 @@ defaults:
       path: "_posts"
     values:
       layout: "post"
+
+  - scope:
+      path: "_music_projects"
+    values:
+      layout: "music-project"
 
   - scope:
       path: "assets/img"
@@ -36,4 +49,3 @@ defaults:
       path: "art/*/thumbs"
     values:
       thumbnail: true
-

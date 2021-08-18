@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<!-- TODO: add physical release links-->
+<!-- TODO: prettify release display -->
+<!-- TODO: add project logos -->
+<!-- TODO: add sound for albums that aren't available on bandcamp -->
+
+<div class="music-project">
+
+    <div class="music-project-sidebar">
+        <h1>{{ page.title }}</h1>
+        <img id="logo"
+             {%- if page.logo -%}
+             src="{{ page.logo }}"
+             {%- else -%}
+             src="/assets/img/{{ page.title }}-logo.png"
+             {%- endif -%}
+             alt="{{ page.title }} logo">
+        <p>{{ page.start_date | date_to_string }}&ndash;
+            {%- if page.end_date -%}
+                {{ page.end_date | date_to_string }}
+            {%- else -%}
+                &hellip;
+            {%- endif -%}
+            {%- if page.status -%}
+                &ensp;({{ page.status }})
+            {%- endif -%}
+        </p>
+        <p>tags: {{ page.tags | join: ", " }}</p>
+    </div>
+
+    <div class="music-project-info">
+
+        {{ page.content | markdownify }}
+
+        <div class="music-releases">
+            <h2>releases</h2>
+
+            {%- assign releases = site.music_releases | where: "author", page.title
+            | group_by_exp: "item", "item.date | date: '%Y'" -%}
+            {% for item in releases %}
+                <h3>{{ item.name }}<!--year--></h3>
+                {%- for release in item.items -%}
+                    <div class="music-release">
+                        <h4>
+                            {{ release.title }} ({{ release.type }})
+                            {%- if release.bandcamp -%}
+                                <a href="{{ release.bandcamp }}"
+                                   title="listen on bandcamp">
+                                    <img src="/assets/img/bandcamp-icon.png"
+                                         alt="listen on bandcamp"
+                                         width="24px" height="24px">
+                                </a>
+                            {%- endif -%}
+                        </h4>
+
+                        <p>released {{ release.date | date_to_string }}
+                            | <em>{{ release.style }}</em>
+                        </p>
+
+                        {{ release.content }}
+
+                    </div>
+                {%- endfor -%}
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

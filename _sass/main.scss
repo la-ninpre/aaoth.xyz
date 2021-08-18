@@ -44,6 +44,10 @@ a:hover {
     font-weight: 500;
 }
 
+.faint {
+    color: $color-main-grey;
+}
+
 nav {
     display: flex;
     position: fixed;
@@ -93,14 +97,14 @@ ul {
 .about {
     display: flex;
     flex-direction: row;
-    img#avatar {
+    #avatar {
         border-radius: 100%;
         height: 128px;
     }
-    .about-sidebar {
+    &-sidebar {
         flex: 23%;
     }
-    .about-links {
+    &-links {
         margin-top: 1em;
         .link-icon {
             width: 32px;
@@ -111,7 +115,7 @@ ul {
             bottom: 0.75em;
         }
     }
-    .about-info {
+    &-info {
         width: 100%;
         p:first-child {
             margin-top: 0;   
@@ -142,11 +146,14 @@ ul {
             border-radius: 1em;
         }
     }
-}
 
-.post-page {
-    margin-bottom: 10px;
-    .post-header {
+    &-page {
+        margin-bottom: 10px;
+        ul {
+            padding-left: 10px;
+        }
+    }
+    &-header {
         margin-bottom: 2em;
         ul {
             display: flex;
@@ -161,10 +168,6 @@ ul {
                 }
             }
         }
-    }
-
-    ul {
-        padding-left: 10px;
     }
 }
 
@@ -229,6 +232,21 @@ ul {
             height: auto;
             image-orientation: from-image;
         }
+    }
+}
+
+.music-project {
+    display: flex;
+
+    &-sidebar {
+        flex: 25%;
+        #logo {
+            width: 100%;
+        }
+    }
+
+    &-info {
+        width: 100%;
     }
 }
 
@@ -340,6 +358,9 @@ footer {
     }
     code {
         background: $color-darker-grey;
+    }
+    .faint {
+        color: $color-dark-grey;
     }
     .art-menu .art-category .link-mask {
         background: $color-dark-bg;
