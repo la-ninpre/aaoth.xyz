@@ -6,7 +6,7 @@
     <li class="art-category">
         <a class="link-mask" href="{{ page.url }}">{{ page.title }}</a>
         <div class="thumbnail">
-            <img src="{{ artthumbs.first }}">
+            <img src="{{ artthumbs | sample }}">
         </div>
     </li>
     {% endif %}
