@@ -30,7 +30,11 @@ do
 
     [ -d "$_thumbs_dir" ] || mkdir "$_thumbs_dir"
 
-    _imgs="$(find . -maxdepth 1 -type f | cut -b 3-)"
+    _imgs="$(find . -maxdepth 1 \
+        -iname "*.jpg" -or \
+        -iname "*.jpeg" -or \
+        -iname "*.gif" -or \
+        -iname "*.png" -type f | cut -b 3-)"
     for _img in $_imgs
     do
         _ext="${_img##*.}"
