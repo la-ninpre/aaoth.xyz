@@ -8,6 +8,14 @@ exclude:
   - LICENSE
   - README.md
   - art/thumbs.sh
+  - aaoth_new_post.sh
+
+# sadly wildcards don't work
+keep_files:
+  - art/photos/thumbs
+  - art/renders/thumbs
+  - art/drawings/thumbs
+  - art/logos/thumbs
 
 excerpt_separator: <!--more-->
 

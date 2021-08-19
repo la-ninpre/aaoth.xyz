@@ -28,7 +28,7 @@ for dir in $_img_dirs
 do
     cd "./$dir" || exit 1
 
-    [ -d "$_thumbs_dir" ] || mkdir "$_thumbs_dir"
+    mkdir -p "$_thumbs_dir"
 
     _imgs="$(find . -maxdepth 1 \
         -iname "*.jpg" -or \
