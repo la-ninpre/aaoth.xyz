@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# example git post-receive hook that i use to autobuild my website on push
+
+# setup paths
+export GEM_HOME=$HOME/gems
+export PATH=$GEM_HOME/bin:$PATH
+
+# set variables, change example.com to your website repo name
+GIT_REPO=$HOME/example.com.git
+TMP_GIT_CLONE=$HOME/tmp/example.com
+GEMFILE=$TMP_GIT_CLONE/Gemfile
+PUBLIC_WWW=/var/www/htdocs/example.com
+
+# change branch name to your main deploy branch
+git clone -b main "$GIT_REPO" "$TMP_GIT_CLONE"
+
+# build the site
+BUNDLE_GEMFILE=$GEMFILE bundle install
+BUNDLE_GEMFILE=$GEMFILE bundle exec jekyll build -s "$TMP_GIT_CLONE" -d "$PUBLIC_WWW"
+
+# genterate thumbnails
+{
+    cp "$TMP_GIT_CLONE/art/thumbs.sh" "$PUBLIC_WWW/art/thumbs.sh"
+    cd "$PUBLIC_WWW/art"
+    sh thumbs.sh
+    rm thumbs.sh
+}
+
+rm -Rf "$TMP_GIT_CLONE"
+exit
