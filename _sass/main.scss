@@ -15,8 +15,8 @@ $border-main: 5px solid;
 $border-nav: $border-main $color-main-grey;
 $border-dark: $border-main $color-dark-grey;
 $font-title: Montserrat, sans-serif;
-$body-font: Lato, sans-serif;
-$code-font: Fira Code, monospace;
+$font-body: Lato, sans-serif;
+$font-code: Fira Code, monospace;
 
 html {
     background: $color-main-bg;
@@ -28,24 +28,15 @@ body {
     margin: 0 auto;
     padding: 8px;
     color: $color-dark-bg;
-    font: 100% $body-font;
+    font: 100% $font-body;
 }
+
 a {
     color: $color-link-idle;
     text-decoration: none;
-}
-a:hover {
-    color: $color-link-hover;
-}
-
-.current {
-    color: $color-nav-current;
-    pointer-events: none;
-    font-weight: 500;
-}
-
-.faint {
-    color: $color-main-grey;
+    &:hover {
+        color: $color-link-hover;
+    }
 }
 
 nav {
@@ -57,9 +48,16 @@ nav {
     max-width: 843px;
     height: 102px;
     font: 400 1.5em $font-title;
+
     letter-spacing: -1.2px;
     background: rgba($color-main-bg, $nav-alpha);
-    
+
+    a.current {
+        color: $color-nav-current;
+        pointer-events: none;
+        font-weight: 500;
+        }
+
     img {
         margin-right: 8px;
     }
@@ -69,6 +67,7 @@ nav {
         width: 430px;
         height: 32px;
         padding: 50px 30px 0 0;
+
         flex-direction: row;
         justify-content: space-between;
         border-bottom: $border-nav;
@@ -80,6 +79,18 @@ h1, h2, h3, h4, h5, h6 {
     color: $color-main-blue;
     font-family: $font-title;
     font-weight: 500;
+
+    a {
+        color: $color-main-blue;
+
+        &:hover {
+            color: $color-dark-blue;
+        }
+    }
+}
+
+hr {
+    border-bottom: $border-nav;
 }
 
 ul {
@@ -90,8 +101,55 @@ ul {
     }
 }
 
+blockquote {
+    margin: 0.5em;
+    padding: 1em;
+    background: $color-main-grey-dark;
+    border-width: 2px 2px 2px 5px;
+    border-color: $color-main-grey;
+    border-style: solid;
+    border-radius: 0.5em;
+}
+
+code {
+    font-family: $font-code;
+    font-size: 0.9em;
+    background: $color-main-grey;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+div.highlight {
+    overflow-x: auto;
+    background: $color-main-grey;
+    padding-left: 0.5em;
+    border-radius: 5px;
+    code {
+        padding: 0;
+    }
+}
+
+audio {
+    width: 100%;
+    border-radius: 25px;
+}
+
+footer {
+    padding-top: 0.5em;
+    border-top: $border-nav;
+    text-align: center;
+    font: 75% $font-body;
+    p {
+        margin: 0;
+    }
+}
+
 .content {
     margin-top: 95px;
+}
+
+.faint {
+    color: $color-main-grey;
 }
 
 .about {
@@ -129,15 +187,19 @@ ul {
     border-radius: 25px 25px 25px 0px;
     border: 2px solid $color-main-grey;
     word-wrap: break-word;
+
     a {
         color: $color-main-blue;
+
+        &:hover {
+            color: $color-dark-blue;
+        }
     }
-    a:hover {
-        color: $color-dark-blue;
-    }
+
     small p {
         display: inline;
     }
+
     p {
         img {
             display: block;
@@ -145,6 +207,7 @@ ul {
             margin: 0 auto;
             border-radius: 1em;
         }
+
     }
 
     &-page {
@@ -171,52 +234,67 @@ ul {
     }
 }
 
+@mixin image-list-item ($width, $height) {
+    &-item-mask {
+        position: absolute;
+        z-index: 1;
+        width: $width;
+        height: $height;
+    }
+    &-item-img {
+        position: relative;
+        width: $width;
+        height: $height;
+
+
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            image-orientation: initial;
+            object-fit: cover;
+        }
+    }
+}
+
+@mixin link-color-transition ($color-bg, $color-fg) {
+    color: rgba($color-fg, 0);
+    background: rgba($color-bg, 0);
+
+    &:hover {
+        color: rgba($color-fg, 1);
+        background: rgba($color-bg, 0.7);
+    }
+}
+
 .art-menu {
     $art-thumb-wt: ($body-width / 2) - 16;
     $art-thumb-ht: 300px;
-    //$art-thumb-ht: $art-thumb-wt;
+
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-around;
     align-content: center;
-    .art-category {
+
+    @include image-list-item($art-thumb-wt, $art-thumb-ht);
+
+    &-item {
         margin-bottom: 1em;
-        .link-mask {
-            position: absolute;
-            z-index: 1;
-            width: $art-thumb-wt;
-            height: $art-thumb-ht;
+        &-mask {
             line-height: $art-thumb-ht - 16;
             text-align: center;
-            background: $color-main-bg;
-            opacity: 0;
-            transition: opacity 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out,
+                        background 0.2s ease-in-out;
             font-size: 200%;
-            color: $color-dark-bg;
 
-            &:hover {
-                opacity: 0.7;
-            }
-        }
-        .thumbnail {
-            width: $art-thumb-wt;
-            height: $art-thumb-ht;
-            position: relative;
-
-            &::after {
-                content: "";
-                display: block;
-                padding-bottom: 100%;
-            }
-
-            img {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                image-orientation: initial;
-                object-fit: cover;
-            }
+            @include link-color-transition($color-main-bg, $color-dark-bg);
         }
     }
 }
@@ -238,6 +316,33 @@ ul {
 .music-project {
     display: flex;
 
+    &-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        @include image-list-item(250px, 300px);
+
+        &-item {
+            margin-bottom: 1em;
+
+            &-mask {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                transition: background 0.2s ease-in-out,
+                            color 0.2s ease-in-out;
+                @include link-color-transition($color-main-bg, $color-dark-bg);
+            }
+            &-text {
+                font: 200% $font-title;
+                margin-top: 0.3em;
+                margin-bottom: 0.1em;
+            }
+        }
+    }
+
     &-sidebar {
         flex: 25%;
         #logo {
@@ -248,48 +353,18 @@ ul {
     &-info {
         width: 100%;
     }
-}
 
+    &-release {
+        &-list {
+        }
 
-blockquote {
-    margin: 0.5em;
-    padding: 1em;
-    background: $color-main-grey-dark;
-    border-width: 2px 2px 2px 5px;
-    border-color: $color-main-grey;
-    border-style: solid;
-    border-radius: 0.5em;
-}
+        &-info {
 
-code {
-    font-family: $code-font;
-    font-size: 0.9em;
-    background: $color-main-grey;
-    padding: 2px;
-    border-radius: 5px;
-}
-div.highlight {
-    overflow-x: auto;
-    background: $color-main-grey;
-    padding-left: 0.5em;
-    border-radius: 5px;
-    code {
-        padding: 0;
-    }
-}
+        }
 
-audio {
-    width: 100%;
-    border-radius: 25px;
-}
-
-footer {
-    padding-top: 0.5em;
-    border-top: $border-nav;
-    text-align: center;
-    font: 75% $body-font;
-    p {
-        margin: 0;
+        &-type {
+            color: $color-main-grey-dark;
+        }
     }
 }
 
@@ -316,7 +391,7 @@ footer {
     }
     .about {
         flex-direction: column-reverse;
-        .about-sidebar {
+        &-sidebar {
             display: flex;
             flex-direction: column;
             img {
@@ -324,7 +399,7 @@ footer {
                 margin: 0 auto;
             }
         }
-        .about-links {
+        &-links {
             margin-top: 0;
             p:first-child {
                 margin: 0;
@@ -362,9 +437,8 @@ footer {
     .faint {
         color: $color-dark-grey;
     }
-    .art-menu .art-category .link-mask {
-        background: $color-dark-bg;
-        color: $color-main-bg;
+    .art-menu-item-mask {
+        @include link-color-transition($color-dark-bg, $color-main-bg);
     }
     div.highlight {
         background: $color-darker-grey;
@@ -375,7 +449,16 @@ footer {
     .post-page .post-header ul li a {
         background: $color-dark-grey;
     }
-
+    .music-project {
+        &-release {
+            &-type {
+                color: $color-dark-grey;
+            }
+        }
+        &-list-item-mask {
+            @include link-color-transition($color-dark-bg, $color-main-bg);
+        }
+    }
     footer {
         border-top: $border-dark;
     }

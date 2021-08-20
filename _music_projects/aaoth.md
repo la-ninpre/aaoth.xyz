@@ -1,10 +1,10 @@
 ---
 title: aaoth
 other: true
-start_date: 30.12.2018
+start_date: 2018.12.30
 description: self-titled project for experiments.
 tags: experimental no&nbsp;music electronic
-logo: /assets/img/aaoth-music-logo.png
+logo: aaoth-logo
 ---
 
 personal experiments and sound studies.

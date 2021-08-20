@@ -6,7 +6,6 @@ layout: default
 <!-- TODO: prettify release display -->
 <!-- TODO: add project logos -->
 <!-- TODO: add sound for albums that aren't available on bandcamp -->
-<!-- TODO: make haelsorisk projects' links start with /haelsorisk/* -->
 
 <div class="music-project">
 
@@ -16,7 +15,7 @@ layout: default
              {%- if page.logo -%}
              src="{{ page.logo }}"
              {%- else -%}
-             src="/assets/img/{{ page.title }}-logo.png"
+             src="/art/logos/thumbs/{{ page.url | split: "/" | last }}-logo_thumb.png"
              {%- endif -%}
              alt="{{ page.title }} logo">
         <p>{{ page.start_date | date_to_string }}&ndash;
@@ -36,17 +35,18 @@ layout: default
 
         {{ page.content | markdownify }}
 
-        <div class="music-releases">
+        <div class="music-project-release-list">
             <h2>releases</h2>
 
-            {%- assign releases = site.music_releases | where: "author", page.title
-            | group_by_exp: "item", "item.date | date: '%Y'" -%}
+            {%- assign releases = site.music_releases | where: "author",
+            page.title | group_by_exp: "item", "item.date | date: '%Y'" -%}
             {% for item in releases %}
                 <h3>{{ item.name }}<!--year--></h3>
                 {%- for release in item.items -%}
-                    <div class="music-release">
+                    <div class="music-project-release-info">
                         <h4>
-                            {{ release.title }} ({{ release.type }})
+                            {{ release.title }} <span class="music-project-release-type">
+                            ({{ release.type }})</span>
                             {%- if release.bandcamp -%}
                                 <a href="{{ release.bandcamp }}"
                                    title="listen on bandcamp">
