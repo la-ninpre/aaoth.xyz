@@ -216,6 +216,7 @@ footer {
             padding-left: 10px;
         }
     }
+
     &-header {
         margin-bottom: 2em;
         ul {
@@ -234,7 +235,7 @@ footer {
     }
 }
 
-@mixin image-list-item ($width, $height) {
+@mixin image-list-item ($width, $height, $object-fit: cover) {
     &-item-mask {
         position: absolute;
         z-index: 1;
@@ -258,7 +259,7 @@ footer {
             width: 100%;
             height: 100%;
             image-orientation: initial;
-            object-fit: cover;
+            object-fit: $object-fit;
         }
     }
 }
@@ -321,7 +322,7 @@ footer {
         flex-flow: row wrap;
         justify-content: space-evenly;
 
-        @include image-list-item(250px, 300px);
+        @include image-list-item(250px, 300px, contain);
 
         &-item {
             margin-bottom: 1em;
