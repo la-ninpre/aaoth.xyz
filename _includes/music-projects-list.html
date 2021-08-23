@@ -1,5 +1,5 @@
 <ul class="music-project-list">
-{% for project in projects %}
+{% for project in include.projects %}
     <li class="music-project-list-item">
         <a class="music-project-list-item-mask"
            href="{{ project.url }}">

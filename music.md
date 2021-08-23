@@ -9,24 +9,18 @@ permalink: /music/
 underground music.
 here's a list of projects in which i took part:
 
-{% comment %}
-    haelsorisk projects
-{% endcomment %}
-{% assign projects = site.music_projects | where: "other", nil %}
+{% assign haelsorisk_projects = site.music_projects | where: "other", nil %}
 
 <div class="haelsorisk-projects-list">
-{% include music-projects-list.html %}
+{% include music-projects-list.html projects=haelsorisk_projects%}
 </div>
 
 [1]:/haelsorisk
 
 # other projects
 
-{% comment %}
-    other projects
-{% endcomment %}
-{% assign projects = site.music_projects | where: "other", true %}
+{% assign other_projects = site.music_projects | where: "other", true %}
 
 <div class="other-projects-list">
-{% include music-projects-list.html %}
+{% include music-projects-list.html projects=other_projects %}
 </div>
