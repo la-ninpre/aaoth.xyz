@@ -4,16 +4,21 @@ layout: default
 
 <!-- TODO: add physical release links-->
 <!-- TODO: prettify release display -->
-<!-- TODO: add project logos -->
 <!-- TODO: add sound for albums that aren't available on bandcamp -->
+<!-- TODO: maybe add search by tag for music projects -->
 
 <div class="music-project">
 
+    <div class="music-project-titlebar">
+        {% include title-with-backlink.html title=page.title backlink="/music/" %}
+    </div>
+
     <div class="music-project-sidebar">
-        <h1>{{ page.title }}</h1>
-        <img id="logo"
-             src="/art/logos/thumbs/{{ page.url | split: "/" | last }}-logo_thumb.png"
-             alt="{{ page.title }} logo">
+        <a href="/art/logos/{{ page.url | split: "/" | last }}-logo.png">
+            <img id="logo"
+                 src="/art/logos/thumbs/{{ page.url | split: "/" | last }}-logo_thumb.png"
+                 alt="{{ page.title }} logo">
+        </a>
         <p>{{ page.start_date | date_to_string }}&ndash;
             {%- if page.end_date -%}
                 {{ page.end_date | date_to_string }}
@@ -31,37 +36,46 @@ layout: default
 
         {{ page.content | markdownify }}
 
+    </div>
+
+    {%- assign releases = site.music_releases | where: "author",
+    page.title | group_by_exp: "item", "item.date | date: '%Y'" -%}
+    {%- assign releases_size = releases | size %}
+    {%- if releases_size > 0 -%}
         <div class="music-project-release-list">
             <h2>releases</h2>
 
-            {%- assign releases = site.music_releases | where: "author",
-            page.title | group_by_exp: "item", "item.date | date: '%Y'" -%}
             {% for item in releases %}
-                <h3>{{ item.name }}<!--year--></h3>
-                {%- for release in item.items -%}
-                    <div class="music-project-release-info">
-                        <h4>
-                            {{ release.title }} <span class="music-project-release-type">
-                            ({{ release.type }})</span>
-                            {%- if release.bandcamp -%}
-                                <a href="{{ release.bandcamp }}"
-                                   title="listen on bandcamp">
-                                    <img src="/assets/img/bandcamp-icon.png"
-                                         alt="listen on bandcamp"
-                                         width="24px" height="24px">
-                                </a>
-                            {%- endif -%}
-                        </h4>
+                <div class="music-project-release-by_year"
+                     id="{{ item.name }}">
+                    <h3 class="music-project-release-year"
+                        id="{{ item.name }}">{{ item.name }}</h3>
+                    {%- for release in item.items -%}
+                        <div class="music-project-release-info"
+                             id="{{ release.title | slugify }}">
+                            <h4>{{ release.title }}
+                                <span class="music-project-release-type">
+                                    ({{ release.type }})</span>
+                                {%- if release.bandcamp -%}
+                                    <a href="{{ release.bandcamp }}"
+                                       title="listen on bandcamp">
+                                        <img src="/assets/img/bandcamp-icon.png"
+                                             alt="listen on bandcamp"
+                                             width="24px" height="24px">
+                                    </a>
+                                {%- endif -%}
+                            </h4>
 
-                        <p>released {{ release.date | date_to_string }}
-                            | <em>{{ release.style }}</em>
-                        </p>
+                            <p>released {{ release.date | date_to_string }}
+                                / <em>{{ release.style }}</em>
+                            </p>
 
-                        {{ release.content }}
+                            {{ release.content }}
 
-                    </div>
-                {%- endfor -%}
+                        </div>
+                    {%- endfor -%}
+                </div>
             {%- endfor -%}
         </div>
-    </div>
+    {%- endif -%}
 </div>
