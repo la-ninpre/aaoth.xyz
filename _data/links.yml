@@ -19,3 +19,7 @@
 - name: hälsorisk
   link: https://haelsorisk.bandcamp.com
   type: bandcamp
+- name: mastodon
+  link: https://distrotoot.com/@la_ninpre
+  type: mastodon
+  rel: me
