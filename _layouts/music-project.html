@@ -5,6 +5,7 @@ layout: default
 <!-- TODO: add physical release links-->
 <!-- TODO: add sound for albums that aren't available on bandcamp -->
 <!-- TODO: maybe add search by tag for music projects -->
+<!-- TODO: add album art -->
 
 <div class="music-project">
 
@@ -37,17 +38,26 @@ layout: default
 
     </div>
 
-    {%- assign releases = site.music_releases |
-    where: "author", page.title |
-    group_by_exp: "item", "item.date | date: '%Y'" -%}
+    {%- if page.title == "hälsorisk" %}
+        {%- assign releases = site.music_releases |
+        where_exp: "item", "item.r_tag contains 'HSR'" |
+        group_by_exp: "item", "item.date | date: '%Y'" -%}
+    {%- else %}
+        {%- assign releases = site.music_releases |
+        where: "author", page.title |
+        group_by_exp: "item", "item.date | date: '%Y'" -%}
+    {%- endif -%}
     {%- assign releases.size = releases | size %}
     {% unless releases.size == 0 %}
-        {% include music-project-release-by-year.html title="releases" releases=releases %}
+        {%- if page.title == "hälsorisk" %}
+            {% include music-project-release-by-year.html title="releases" releases=releases print_author=true %}
+        {% else %}
+            {% include music-project-release-by-year.html title="releases" releases=releases %}
+        {% endif %}
     {% endunless %}
 
     {%- assign misc_tracks = site.music_titles |
     where_exp: "item", "item.author == page.title and item.r_tag == nil" |
-    sort: "date" |
     group_by_exp: "item", "item.date | date: '%Y'" -%}
     {%- assign misc_tracks.size = misc_tracks | size %}
     {% unless misc_tracks.size == 0 %}

@@ -12,6 +12,7 @@ exclude:
 
 collections:
   music_releases:
+    output: true
 
   music_projects:
     output: true
@@ -37,6 +38,12 @@ defaults:
       path: "_music_projects"
     values:
       layout: "music-project"
+
+  - scope:
+      path: ""
+      type: "music_releases"
+    values:
+      layout: "music-release"
 
   - scope:
       path: "assets/img"

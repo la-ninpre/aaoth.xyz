@@ -1,19 +1,34 @@
 {%- assign release = include.release %}
+{%- assign print_author = include.print_author %}
+
 <div class="music-project-release-info"
      id="{{ release.title | slugify }}">
-    <h4>{{ release.title }}
-        {% if release.r_tag %}
-            <span class="music-project-release-type">
-                ({{ release.type }})</span>
-        {% endif %}
-        {%- if release.bandcamp -%}
-            <a href="{{ release.bandcamp }}"
-               title="listen on bandcamp">
-                <img src="/assets/img/bandcamp-icon.png"
-                     alt="listen on bandcamp"
-                     width="24px" height="24px">
-            </a>
-        {%- endif -%}
+
+    <h4>{% if print_author %}
+        {% assign author_page = site.music_projects |
+        find: "title", release.author %}
+        <a href="{{ author_page.permalink }}">{{ release.author }}</a>
+        &mdash;
+    {% endif %}
+    {% if release.r_tag %}
+        <a href="{{ release.permalink }}">
+            {{ release.title }}
+        </a>
+    {% else %}
+        {{ release.title }}
+    {% endif %}
+    {% if release.r_tag %}
+        <span class="music-project-release-type">
+            ({{ release.type }})</span>
+    {% endif %}
+    {%- if release.bandcamp -%}
+        <a href="{{ release.bandcamp }}"
+           title="listen on bandcamp">
+            <img src="/assets/img/bandcamp-icon.png"
+                 alt="listen on bandcamp"
+                 width="24px" height="24px">
+        </a>
+    {%- endif -%}
     </h4>
 
     <p>released {{ release.date | date_to_string }}

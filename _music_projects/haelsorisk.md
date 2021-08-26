@@ -9,9 +9,15 @@ permalink: /haelsorisk/
 logo: haelsorisk-logo
 ---
 
-dark non-musical ensemble.
+## overview
 
-this is <span class="faint">non</span>community
-of truely free <span class="faint">anti</span>art.
+other than being an independent web-label, hälsorisk can be treated as
+music project on it's own. additionaly it is a
+<span class="with_hidden"><span class="hidden">non</span>community</span>
+of truely free
+<span class="with_hidden"><span class="hidden">anti</span>art</span>.
 
-vi väntar inte dig tillbaka.
+## history
+
+hälsorisk was created in 2015 by aaoth. it's purpose was to absorb and
+unite all musical and cultural work done by me.
