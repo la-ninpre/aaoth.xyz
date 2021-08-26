@@ -8,6 +8,7 @@ exclude:
   - LICENSE
   - README.md
   - art/thumbs.sh
+  - templates
 
 collections:
   music_releases:
@@ -16,6 +17,8 @@ collections:
     output: true
     permalink: /music/:title
     sort_by: start_date
+
+  music_titles:
 
 excerpt_separator: <!--more-->
 

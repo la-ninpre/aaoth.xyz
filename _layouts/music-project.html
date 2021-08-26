@@ -70,6 +70,32 @@ layout: default
                                 / <em>{{ release.style }}</em>
                             </p>
 
+                            {%- unless release.type == "track" -%}
+                                <h5>tracklist</h5>
+                                <div class="music-project-tracklist">
+                                    {%- assign release_tracks = site.music_titles |
+                                    where: "r_tag", release.r_tag | sort: "num" -%}
+                                    <ol>
+                                        {% for track in release_tracks %}
+                                            <li>
+                                                {% if release.author == track.author %}
+                                                    {{ track.title }}
+                                                {% else %}
+                                                    {% assign t_a_has_url = site.music_projects | find: "title", track.author %}
+                                                    {% if t_a_has_url %}
+                                                        <a href="{{ t_a_has_url.url }}">
+                                                            {{ track.author }}</a>
+                                                    {% else %}
+                                                        {{ track.author }}
+                                                    {% endif %}
+                                                    &mdash; {{ track.title }}
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ol>
+                                </div>
+                            {%- endunless -%}
+
                             {{ release.content }}
 
                         </div>
