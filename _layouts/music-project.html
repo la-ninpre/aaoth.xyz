@@ -42,33 +42,15 @@ layout: default
     group_by_exp: "item", "item.date | date: '%Y'" -%}
     {%- assign releases.size = releases | size %}
     {% unless releases.size == 0 %}
-        <div class="music-project-release-list">
-            <h2>releases</h2>
-
-            {% for year_group in releases %}
-                <div class="music-project-release-by_year"
-                     id="{{ year_group.name }}">
-                    <h3 class="music-project-release-year"
-                        id="{{ year_group.name }}">{{ year_group.name }}</h3>
-                    {%- for release in year_group.items -%}
-                        {% include music-project-release-info.html release=release %}
-                    {%- endfor -%}
-                </div>
-            {%- endfor -%}
-        </div>
+        {% include music-project-release-by-year.html title="releases" releases=releases %}
     {% endunless %}
 
     {%- assign misc_tracks = site.music_titles |
     where_exp: "item", "item.author == page.title and item.r_tag == nil" |
-    sort: "date" -%}
+    sort: "date" |
+    group_by_exp: "item", "item.date | date: '%Y'" -%}
     {%- assign misc_tracks.size = misc_tracks | size %}
     {% unless misc_tracks.size == 0 %}
-        <div class="music-project-release-list">
-            <h2>misc tracks</h2>
-
-            {% for track in misc_tracks %}
-                {% include music-project-release-info.html release=track %}
-            {%- endfor %}
-        </div>
+        {% include music-project-release-by-year.html title="misc tracks" releases=misc_tracks %}
     {% endunless %}
 </div>
