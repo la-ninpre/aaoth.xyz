@@ -1,10 +1,11 @@
 ---
 author: aaoth
-title: sgti
+title: vortex machines
 type: track
-date: 23-04-2019
-style: eai
-bandcamp: https://aaoth.bandcamp.com/track/sgti
+date: 10-05-2019
+style: electronic improvisation
+bandcamp: https://aaoth.bandcamp.com/track/vortex-machines
+r_tag: AAOTH-07
 ---
 
-**s**unvox/**g**uv'nor/**t**ape/**i**mprov
+apocalyptic electronic improvisation using sunvox.

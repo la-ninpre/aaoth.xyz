@@ -1,10 +1,11 @@
 ---
 author: aaoth
-title: mind collapse
+title: sgti
 type: track
-date: 31-03-2019
+date: 23-04-2019
 style: eai
-bandcamp: https://aaoth.bandcamp.com/track/mind-collapse
+bandcamp: https://aaoth.bandcamp.com/track/sgti
+r_tag: AAOTH-06
 ---
 
-recorded directly on recycled tape. only three samples in sunvox were used.
+**s**unvox/**g**uv'nor/**t**ape/**i**mprov

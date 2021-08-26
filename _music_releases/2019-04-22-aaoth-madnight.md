@@ -5,6 +5,7 @@ type: track
 date: 22-04-2019
 style: electronic lo-fi
 bandcamp: https://aaoth.bandcamp.com/track/madnight
+r_tag: AAOTH-05
 ---
 
 atmospheric electronic track made using [sunvox][1] on android.

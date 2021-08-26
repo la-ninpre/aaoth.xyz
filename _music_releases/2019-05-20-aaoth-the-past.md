@@ -1,10 +1,11 @@
 ---
 author: aaoth
-title: vortex machines
+title: the past
 type: track
-date: 10-05-2019
-style: electronic improvisation
-bandcamp: https://aaoth.bandcamp.com/track/vortex-machines
+date: 20-05-2019
+style: eai lo-fi
+bandcamp: https://aaoth.bandcamp.com/track/the-past
+r_tag: AAOTH-08
 ---
 
-apocalyptic electronic improvisation using sunvox.
+atmospheric lo-fi improvisation.

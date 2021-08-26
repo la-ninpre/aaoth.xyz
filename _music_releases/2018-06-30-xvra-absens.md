@@ -5,6 +5,7 @@ type: album
 date: 30-06-2018
 style: black&nbsp;metal raw&nbsp;black
 bandcamp: https://haelsorisk.bandcamp.com/album/absens
+r_tag: HSR-12
 ---
 
 dedicated to the ultimate void that was the beginning

@@ -1,10 +1,11 @@
 ---
 author: aaoth
-title: the past
+title: massive void
 type: track
-date: 20-05-2019
-style: eai lo-fi
-bandcamp: https://aaoth.bandcamp.com/track/the-past
+date: 13-04-2020
+style: generative electronic
+bandcamp: https://aaoth.bandcamp.com/track/massive-void
+r_tag: AAOTH-09
 ---
 
-atmospheric lo-fi improvisation.
+generative abstract track made with vcvrack.

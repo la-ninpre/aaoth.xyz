@@ -1,10 +1,11 @@
 ---
 author: aaoth
-title: massive void
+title: mind collapse
 type: track
-date: 13-04-2020
-style: generative electronic
-bandcamp: https://aaoth.bandcamp.com/track/massive-void
+date: 31-03-2019
+style: eai
+bandcamp: https://aaoth.bandcamp.com/track/mind-collapse
+r_tag: AAOTH-04
 ---
 
-generative abstract track made with vcvrack.
+recorded directly on recycled tape. only three samples in sunvox were used.
