@@ -10,6 +10,7 @@ exclude:
   - art/thumbs.sh
   - aaoth_new_post.sh
   - post-receive.example
+  - templates
 
 # sadly wildcards don't work
 keep_files:
@@ -17,6 +18,17 @@ keep_files:
   - art/renders/thumbs
   - art/drawings/thumbs
   - art/logos/thumbs
+
+collections:
+  music_releases:
+    output: true
+
+  music_projects:
+    output: true
+    permalink: /music/:title
+    sort_by: start_date
+
+  music_titles:
 
 excerpt_separator: <!--more-->
 
@@ -32,6 +44,17 @@ defaults:
       layout: "post"
 
   - scope:
+      path: "_music_projects"
+    values:
+      layout: "music-project"
+
+  - scope:
+      path: ""
+      type: "music_releases"
+    values:
+      layout: "music-release"
+
+  - scope:
       path: "assets/img"
     values:
       image: true
@@ -45,4 +68,3 @@ defaults:
       path: "art/*/thumbs"
     values:
       thumbnail: true
-

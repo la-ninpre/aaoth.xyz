@@ -1,8 +1,17 @@
 <nav>
-	<ul>
-		{% for item in site.data.navigation %}
-		<li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-		{% endfor %}
-	</ul>
-	<img src="/assets/img/aaoth-logo.png" alt="aaoth" width="376px" height="auto">
+    <img src="/assets/img/aaoth-logo.png" alt="aaoth website logo"
+         width="376px" height="auto">
+    <ul>
+        {%- for item in site.data.navigation -%}
+            <li>
+                <a href="{{ item.link }}"
+                   {%- if page.url == item.link -%}
+                   class="current"
+                   {%- endif -%}>
+                    {{ item.name }}
+                </a>
+            </li>
+        {%- endfor -%}
+    </ul>
+    <hr>
 </nav>

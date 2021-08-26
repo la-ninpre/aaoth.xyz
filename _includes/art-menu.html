@@ -3,9 +3,13 @@
     {%- include pic-path.html -%}
     {%- assign pagedir = page.dir | remove_first: "/" | split: "/" -%}
     {%- if pagedir.first == "art" and pagedir.size > 1 -%}
-    <li class="art-category">
-        <a class="link-mask" href="{{ page.url }}">{{ page.title }}</a>
-        <div class="thumbnail">
+    <li class="art-menu-item">
+        <a class="art-menu-item-mask" href="{{ page.url }}">
+            <span class="art-menu-item-text">
+                {{ page.title }}
+            </span>
+        </a>
+        <div class="art-menu-item-img">
             <img src="{{ artthumbs | sample }}">
         </div>
     </li>

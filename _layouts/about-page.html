@@ -9,28 +9,19 @@ layout: default
         <div class="about-links">
             <p>other links:</p>
             <ul>
-                {% assign sorted_links = site.data.links | sort: "type" %}
+                {%- assign sorted_links = site.data.links | sort: "type" -%}
                 {% for link in sorted_links %}
                 <li>
-                    <a href="{{ link.link }}">
+                    <a href="{{ link.link }}"
+                    {%- if link.rel -%}rel="{{ link.rel }}"{%- endif -%}>
                         <img 
                        class= "link-icon"
-                       alt="{{ link.type }}"
                        width=32px height=32px
                        src="/assets/img/{{ link.type }}-icon.png">
                         <div class="link-text">{{ link.name }}</div>
                     </a>
                 </li>
                 {% endfor %}
-                <li>
-                    <a rel="me" href="https://distrotoot.com/@la_ninpre">
-                        <img class="link-icon"
-                             alt="mastodon"
-                             width=32px height=32px
-                             src="/assets/img/mastodon-icon.png">
-                        <div class="link-text">mastodon</div>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>

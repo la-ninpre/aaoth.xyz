@@ -1,0 +1,20 @@
+<ul class="music-project-list">
+{% for project in include.projects %}
+    <li class="music-project-list-item">
+        <a class="music-project-list-item-mask"
+           href="{{ project.url }}">
+            <span class="music-project-list-item-text">
+                {{ project.title }}
+            </span>
+            <strong>{{ project.description }}</strong>
+            {%- if project.roles -%}
+            <em>({{ project.roles | split: " " | join: ", "}})</em>
+            {%- endif -%}
+        </a>
+        <div class="music-project-list-item-img">
+            <img src="/art/logos/thumbs/{{ project.logo }}_thumb.png"
+            alt="{{ project.title }} logo">
+       </div>
+    </li>
+{% endfor %}
+</ul>
