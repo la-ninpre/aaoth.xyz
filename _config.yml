@@ -25,7 +25,7 @@ collections:
 
   music_projects:
     output: true
-    permalink: /music/:title
+    permalink: /music/:title/
     sort_by: start_date
 
   music_titles:
@@ -44,7 +44,7 @@ defaults:
       layout: "post"
 
   - scope:
-      path: "_music_projects"
+      type: "music_projects"
     values:
       layout: "music-project"
 

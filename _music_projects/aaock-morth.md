@@ -5,7 +5,7 @@ status: stalled
 description: ambient related to voices and obscure sounds
 roles: samples mixing mastering
 tags: ambient dark&nbsp;ambient
-permalink: /haelsorisk/aaock-morth
+permalink: /haelsorisk/aaock-morth/
 logo: aaock-morth-logo
 ---
 

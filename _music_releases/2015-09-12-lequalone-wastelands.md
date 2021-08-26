@@ -6,7 +6,7 @@ date: 12-09-2015
 style: dark&nbsp;ambient
 bandcamp: https://haelsorisk.bandcamp.com/album/wastelands
 r_tag: HSR-02
-permalink: /haelsorisk/lequalone/wastelands
+permalink: /haelsorisk/lequalone/wastelands/
 ---
 
 apocalyptic synthwave inspired by fallout game series.

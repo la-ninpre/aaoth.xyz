@@ -6,7 +6,7 @@ status: active
 description: black metal
 tags: black&nbsp;metal dsbm
 roles: all&nbsp;instruments vocals
-permalink: /haelsorisk/xvra
+permalink: /haelsorisk/xvra/
 logo: xvra-logo
 ---
 

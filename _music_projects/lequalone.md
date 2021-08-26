@@ -6,7 +6,7 @@ status: closed
 description: dark synthwave and dark ambient
 roles: synths samples mixing mastering
 tags: dark&nbsp;synthwave dark&nbsp;ambient
-permalink: /haelsorisk/lequalone
+permalink: /haelsorisk/lequalone/
 logo: lequalone-logo
 ---
 
