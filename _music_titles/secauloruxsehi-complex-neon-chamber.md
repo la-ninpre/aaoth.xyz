@@ -1,11 +1,9 @@
 ---
 author: secauloruxse'i
 title: complex neon chamber
-type: track
 date: 08-02-2019
 style: idm no&nbsp;techno
 bandcamp: https://aaoth.bandcamp.com/track/complex-neon-chamber
-r_tag: SCLRS-04
 ---
 
 lyrics:

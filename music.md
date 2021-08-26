@@ -12,7 +12,7 @@ here's a list of projects in which i took part:
 {% assign haelsorisk_projects = site.music_projects | where: "other", nil %}
 
 <div class="haelsorisk-projects-list">
-{% include music-projects-list.html projects=haelsorisk_projects%}
+{% include music-projects-list.html projects=haelsorisk_projects %}
 </div>
 
 [1]:/haelsorisk

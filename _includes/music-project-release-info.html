@@ -1,0 +1,53 @@
+{%- assign release = include.release %}
+<div class="music-project-release-info"
+     id="{{ release.title | slugify }}">
+    <h4>{{ release.title }}
+        {% if release.r_tag %}
+            <span class="music-project-release-type">
+                ({{ release.type }})</span>
+        {% endif %}
+        {%- if release.bandcamp -%}
+            <a href="{{ release.bandcamp }}"
+               title="listen on bandcamp">
+                <img src="/assets/img/bandcamp-icon.png"
+                     alt="listen on bandcamp"
+                     width="24px" height="24px">
+            </a>
+        {%- endif -%}
+    </h4>
+
+    <p>released {{ release.date | date_to_string }}
+        / <em>{{ release.style }}</em>
+    </p>
+
+    {%- if release.r_tag -%}
+        <h5>tracklist</h5>
+        <div class="music-project-tracklist">
+            {%- assign release_tracks = site.music_titles |
+            where: "r_tag", release.r_tag | sort: "num" -%}
+            <ol>
+                {%- for track in release_tracks -%}
+                    <li value="{{ track.num }}">
+                        {%- if release.author == track.author -%}
+                            {{ track.title }}
+                        {%- else -%}
+                            {%- assign
+                            t_a_has_url = site.music_projects
+                            | find: "title", track.author -%}
+                            {%- if t_a_has_url -%}
+                                <a href="{{ t_a_has_url.url }}">
+                                    {{ track.author }}</a>
+                            {%- else -%}
+                                {{ track.author }}
+                            {% endif %}
+                            &mdash; {{ track.title }}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+    {%- endif -%}
+
+    {{ release.content | markdownify }}
+
+</div>

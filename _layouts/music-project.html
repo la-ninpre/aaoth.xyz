@@ -3,7 +3,6 @@ layout: default
 ---
 
 <!-- TODO: add physical release links-->
-<!-- TODO: prettify release display -->
 <!-- TODO: add sound for albums that aren't available on bandcamp -->
 <!-- TODO: maybe add search by tag for music projects -->
 
@@ -38,70 +37,38 @@ layout: default
 
     </div>
 
-    {%- assign releases = site.music_releases | where: "author",
-    page.title | group_by_exp: "item", "item.date | date: '%Y'" -%}
-    {%- assign releases_size = releases | size %}
-    {%- if releases_size > 0 -%}
+    {%- assign releases = site.music_releases |
+    where: "author", page.title |
+    group_by_exp: "item", "item.date | date: '%Y'" -%}
+    {%- assign releases.size = releases | size %}
+    {% unless releases.size == 0 %}
         <div class="music-project-release-list">
             <h2>releases</h2>
 
-            {% for item in releases %}
+            {% for year_group in releases %}
                 <div class="music-project-release-by_year"
-                     id="{{ item.name }}">
+                     id="{{ year_group.name }}">
                     <h3 class="music-project-release-year"
-                        id="{{ item.name }}">{{ item.name }}</h3>
-                    {%- for release in item.items -%}
-                        <div class="music-project-release-info"
-                             id="{{ release.title | slugify }}">
-                            <h4>{{ release.title }}
-                                <span class="music-project-release-type">
-                                    ({{ release.type }})</span>
-                                {%- if release.bandcamp -%}
-                                    <a href="{{ release.bandcamp }}"
-                                       title="listen on bandcamp">
-                                        <img src="/assets/img/bandcamp-icon.png"
-                                             alt="listen on bandcamp"
-                                             width="24px" height="24px">
-                                    </a>
-                                {%- endif -%}
-                            </h4>
-
-                            <p>released {{ release.date | date_to_string }}
-                                / <em>{{ release.style }}</em>
-                            </p>
-
-                            {%- unless release.type == "track" -%}
-                                <h5>tracklist</h5>
-                                <div class="music-project-tracklist">
-                                    {%- assign release_tracks = site.music_titles |
-                                    where: "r_tag", release.r_tag | sort: "num" -%}
-                                    <ol>
-                                        {% for track in release_tracks %}
-                                            <li>
-                                                {% if release.author == track.author %}
-                                                    {{ track.title }}
-                                                {% else %}
-                                                    {% assign t_a_has_url = site.music_projects | find: "title", track.author %}
-                                                    {% if t_a_has_url %}
-                                                        <a href="{{ t_a_has_url.url }}">
-                                                            {{ track.author }}</a>
-                                                    {% else %}
-                                                        {{ track.author }}
-                                                    {% endif %}
-                                                    &mdash; {{ track.title }}
-                                                {% endif %}
-                                            </li>
-                                        {% endfor %}
-                                    </ol>
-                                </div>
-                            {%- endunless -%}
-
-                            {{ release.content }}
-
-                        </div>
+                        id="{{ year_group.name }}">{{ year_group.name }}</h3>
+                    {%- for release in year_group.items -%}
+                        {% include music-project-release-info.html release=release %}
                     {%- endfor -%}
                 </div>
             {%- endfor -%}
         </div>
-    {%- endif -%}
+    {% endunless %}
+
+    {%- assign misc_tracks = site.music_titles |
+    where_exp: "item", "item.author == page.title and item.r_tag == nil" |
+    sort: "date" -%}
+    {%- assign misc_tracks.size = misc_tracks | size %}
+    {% unless misc_tracks.size == 0 %}
+        <div class="music-project-release-list">
+            <h2>misc tracks</h2>
+
+            {% for track in misc_tracks %}
+                {% include music-project-release-info.html release=track %}
+            {%- endfor %}
+        </div>
+    {% endunless %}
 </div>
