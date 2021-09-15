@@ -6,9 +6,12 @@ $color-main-grey: #e1e1e1;
 $color-main-grey-dark: #c4c4c4;
 $color-dark-grey: #1f1f1f;
 $color-darker-grey: #101010;
-$color-link-idle: #707070;
+$color-link-idle: #2e4054;
+$color-link-idle-dark: #999999;
 $color-link-hover: #999999;
-$color-nav-current: #333333;
+$color-link-hover-dark: #707070;
+$color-nav-current: #19212a;
+$color-nav-current-dark: #999999;
 $nav-alpha: 0.95;
 $body-width: 835px;
 $border-main: 5px solid;
@@ -34,6 +37,7 @@ body {
 a {
     color: $color-link-idle;
     text-decoration: none;
+    transition: 0.2s ease-in-out;
     &:hover {
         color: $color-link-hover;
     }
@@ -488,8 +492,17 @@ footer {
     body {
         color: $color-main-bg;
     }
+    a {
+        color: $color-link-idle-dark;
+        &:hover {
+            color: $color-link-hover-dark;
+        }
+    }
     nav {
         background: rgba($color-dark-bg, $nav-alpha);
+        a.current {
+            color: $color-nav-current-dark;
+        }
         ul {
             border-bottom: $border-dark;
         }
