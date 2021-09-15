@@ -14,10 +14,9 @@ layout: default
                 <li>
                     <a href="{{ link.link }}"
                     {%- if link.rel -%}rel="{{ link.rel }}"{%- endif -%}>
-                        <img 
-                       class= "link-icon"
-                       width=32px height=32px
-                       src="/assets/img/{{ link.type }}-icon.png">
+                        <img class= "link-icon" width=32px height=32px
+                             alt="{{ link.type }} logo"
+                             src="/assets/img/{{ link.type }}-icon.png">
                         <div class="link-text">{{ link.name }}</div>
                     </a>
                 </li>
