@@ -7,9 +7,8 @@
     <a href="{{ post.url }}">read more...</a>
     </p>
     <small>
-        <p>{{ post.date | date_to_string }} /
+        {{ post.date | date_to_string }} /
         {% for tag in post.tags %}<a href="/tags/{{tag}}">{{tag}} </a>
         {% endfor %}
-        </p>
     </small>
 </div>

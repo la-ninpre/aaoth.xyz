@@ -13,7 +13,7 @@ i also launched an instance of [element][2] matrix web-client on
 [element.aaoth.xyz][3], so you can try it.
 
 [0]:https://matrix.org
-[1]:https://matrix.org/docs/projects/server/synapse"
+[1]:https://matrix.org/docs/projects/server/synapse
 [2]:https://element.io
 [3]:https://element.aaoth.xyz
 
