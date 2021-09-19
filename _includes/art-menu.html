@@ -1,6 +1,6 @@
 <ul class="art-menu">
 {%- for page in site.pages -%}
-    {%- include pic-path.html -%}
+    {%- include pic-path.liquid -%}
     {%- assign pagedir = page.dir | remove_first: "/" | split: "/" -%}
     {%- if pagedir.first == "art" and pagedir.size > 1 -%}
     <li class="art-menu-item">
