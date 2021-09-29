@@ -63,7 +63,6 @@
          url('/assets/fonts/Lato-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
-    text-rendering: optimizeLegibility;
     font-display: swap;
 }
 
@@ -76,7 +75,6 @@
          url('/assets/fonts/Lato-Italic.ttf') format('truetype');
     font-style: italic;
     font-weight: 400;
-    text-rendering: optimizeLegibility;
     font-display: swap;
 }
 
@@ -89,7 +87,6 @@
          url('/assets/fonts/Lato-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: 700;
-    text-rendering: optimizeLegibility;
     font-display: swap;
 }
 
@@ -102,7 +99,6 @@
          url('/assets/fonts/Lato-BoldItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: 700;
-    text-rendering: optimizeLegibility;
     font-display: swap;
 }
 /** =================== FIRA CODE ===================== **/
