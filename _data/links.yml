@@ -1,6 +1,9 @@
 - name: github
   link: https://github.com/la-ninpre
   type: github
+- name: gitlab
+  link: https://gitlab.com/la-ninpre
+  type: gitlab
 - name: youtube
   link: https://www.youtube.com/channel/UCLW6sGRLddTR-fB-Ae5uv6Q/
   type: youtube
