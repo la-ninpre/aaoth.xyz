@@ -22,7 +22,15 @@
 - name: hälsorisk
   link: https://haelsorisk.bandcamp.com
   type: bandcamp
-- name: mastodon
+- name: distrotoot
   link: https://distrotoot.com/@la_ninpre
   type: mastodon
+  rel: me
+- name: toki.social
+  link: https://toki.social/@jan_lewa
+  type: mastodon
+  rel: me
+- name: keybase
+  link: https://keybase.io/la_ninpre
+  type: keybase
   rel: me
