@@ -14,3 +14,12 @@ i've decided to use [jekyll](https://jekyllrb.com) for this purpose, because
 for my ease of use i added
 [this git hook](https://jekyllrb.com/docs/deployment/automated/)
 to my server-side git repository.
+
+## license
+
+all site contents are licensed under
+[creative commons attribution share-alike][1] license (see `LICENSE.CC-BY-SA`).
+
+all supplemental code is licensed under an isc license (see `LICENSE.ISC`).
+
+[1]:https://creativecommons.org/licenses/by-sa/4.0/
