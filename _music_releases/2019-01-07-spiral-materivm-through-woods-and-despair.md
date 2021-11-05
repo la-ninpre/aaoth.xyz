@@ -4,7 +4,7 @@ title: through woods and despair
 type: album
 date: 07-01-2019
 style: post-rock
-bandcamp: https://sprial-materivm.bandcamp.com/album/through-woods-and-despair
+bandcamp: https://spiral-materivm.bandcamp.com/album/through-woods-and-despair
 r_tag: HSR-13
 permalink: /music/spiral-materivm/through-woods-and-despair/
 ---
