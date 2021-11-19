@@ -14,10 +14,10 @@ exclude:
 
 # sadly wildcards don't work
 keep_files:
-  - art/photos/thumbs
-  - art/renders/thumbs
-  - art/drawings/thumbs
-  - art/logos/thumbs
+  - visual/photos/thumbs
+  - visual/renders/thumbs
+  - visual/drawings/thumbs
+  - visual/logos/thumbs
 
 collections:
   music_releases:
@@ -60,11 +60,11 @@ defaults:
       image: true
 
   - scope:
-      path: "art"
+      path: "visual"
     values:
       art: true
 
   - scope:
-      path: "art/*/thumbs"
+      path: "visual/*/thumbs"
     values:
       thumbnail: true

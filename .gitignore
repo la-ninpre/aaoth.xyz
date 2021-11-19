@@ -3,4 +3,4 @@ _site/
 .jekyll-metadata
 .sass-cache/
 Gemfile.lock
-art/*/thumbs/
+visual/*/thumbs/

@@ -1,6 +1,5 @@
 ---
-title: art
-permalink: /art/
+title: visual
 ---
 
 here are some photos and pictures.
