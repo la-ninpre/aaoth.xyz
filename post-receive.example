@@ -21,8 +21,8 @@ BUNDLE_GEMFILE=$GEMFILE bundle exec jekyll build -s "$TMP_GIT_CLONE" -d "$PUBLIC
 
 # genterate thumbnails
 {
-    cp "$TMP_GIT_CLONE/art/thumbs.sh" "$PUBLIC_WWW/art/thumbs.sh"
-    cd "$PUBLIC_WWW/art"
+    cp "$TMP_GIT_CLONE/visual/thumbs.sh" "$PUBLIC_WWW/visual/thumbs.sh"
+    cd "$PUBLIC_WWW/visual"
     sh thumbs.sh
     rm thumbs.sh
 }
