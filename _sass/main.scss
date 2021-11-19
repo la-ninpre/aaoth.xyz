@@ -279,13 +279,6 @@ footer {
         width: $width;
         height: $height;
 
-
-        &::after {
-            content: "";
-            display: block;
-            padding-bottom: 100%;
-        }
-
         img {
             position: absolute;
             width: 100%;
