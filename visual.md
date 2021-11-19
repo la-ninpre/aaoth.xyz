@@ -1,5 +1,6 @@
 ---
 title: visual
+permalink: /visual/
 ---
 
 here are some photos and pictures.
