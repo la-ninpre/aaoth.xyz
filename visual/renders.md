@@ -1,6 +1,6 @@
 ---
 title: renders
-permalink: /art/renders/
+permalink: /visual/renders/
 layout: art-category
 ---
 

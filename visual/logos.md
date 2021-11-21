@@ -1,6 +1,6 @@
 ---
 title: logos
-permalink: /art/logos/
+permalink: /visual/logos/
 layout: art-category
 ---
 

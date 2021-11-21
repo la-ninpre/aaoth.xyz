@@ -1,6 +1,6 @@
 ---
 title: photos
-permalink: /art/photos/
+permalink: /visual/photos/
 layout: art-category
 ---
 

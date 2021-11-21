@@ -1,6 +1,6 @@
 ---
 title: drawings
-permalink: /art/drawings/
+permalink: /visual/drawings/
 layout: art-category
 ---
 
