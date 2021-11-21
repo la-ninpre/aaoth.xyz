@@ -2,7 +2,7 @@
 {%- for page in site.pages -%}
     {%- include pic-path.liquid -%}
     {%- assign pagedir = page.dir | remove_first: "/" | split: "/" -%}
-    {%- if pagedir.first == "art" and pagedir.size > 1 -%}
+    {%- if pagedir.first == "visual" and pagedir.size > 1 -%}
     <li class="art-menu-item">
         <a class="art-menu-item-mask" href="{{ page.url }}">
             <span class="art-menu-item-text">
