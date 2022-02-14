@@ -22,11 +22,15 @@
 - name: hälsorisk
   link: https://haelsorisk.bandcamp.com
   type: bandcamp
-- name: distrotoot
-  link: https://distrotoot.com/@la_ninpre
+- name: starnix network
+  link: https://mstdn.starnix.network/@la_ninpre
   type: mastodon
   rel: me
 - name: toki.social
   link: https://toki.social/@jan_lewa
   type: mastodon
+  rel: me
+- name: local pleroma
+  link: https://pleroma.aaoth.xyz/users/la_ninpre
+  type: pleroma-self
   rel: me
