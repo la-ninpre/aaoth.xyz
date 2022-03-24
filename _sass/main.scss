@@ -17,9 +17,9 @@ $body-width: 835px;
 $border-main: 5px solid;
 $border-nav: $border-main $color-main-grey;
 $border-dark: $border-main $color-dark-grey;
-$font-title: Montserrat, sans-serif;
-$font-body: Lato, sans-serif;
-$font-code: "Fira Code", monospace;
+$font-title: sans-serif;
+$font-body: sans-serif;
+$font-code: monospace;
 
 html {
     background: $color-main-bg;
