@@ -8,4 +8,4 @@ subscribe via rss:
 
 ## posts
 
-[dualboot linux and openbsd with grub](2021-11-03-dualboot-linux-and-openbsd-with-grub.html "2021-11-03")
+[2021-11-03 dualboot linux and openbsd with grub](2021-11-03-dualboot-linux-and-openbsd-with-grub.html "2021-11-03")
