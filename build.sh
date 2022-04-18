@@ -14,7 +14,7 @@ title="aaoth.xyz"
 feed_title="$title - feed"
 
 if [ -z "$AAOTH_ROOT" ]; then root="dst"; else root="$AAOTH_ROOT"; fi
-if [ -z "$AAOTH_GEMROOT" ]; then gemroot="dst_gemini"; else root="$AAOTH_GEMROOT"; fi
+if [ -z "$AAOTH_GEMROOT" ]; then gemroot="dst_gemini"; else gemroot="$AAOTH_GEMROOT"; fi
 en_src="en"
 en_dst="$root"
 en_gemdst="$gemroot"

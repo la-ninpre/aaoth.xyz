@@ -14,7 +14,7 @@ export AAOTH_ROOT AAOTH_GEMROOT
 git clone -b main "$GIT_REPO" "$TMP_GIT_CLONE"
 
 # build the site
-cd "$TMP_GIT_CLONE" && sh build.sh
+cd "$TMP_GIT_CLONE" && ./build.sh
 
 # clean up
 rm -Rf "$TMP_GIT_CLONE"
