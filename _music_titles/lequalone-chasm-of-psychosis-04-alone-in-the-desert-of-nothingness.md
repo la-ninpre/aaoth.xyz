@@ -1,6 +1,0 @@
----
-title: alone in the desert of nothingness
-author: L=1
-r_tag: HSR-05
-num: 04
----

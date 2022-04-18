@@ -1,25 +1,40 @@
 # aaoth.xyz
 
-repo of [aaoth.xyz](https://aaoth.xyz) website.
+repo of aaoth.xyz [website][0] and [gemini capsule][1].
 
 i have a lot of different creative projects so that i can't handle it in my
 head. so i wish i'll be able to create some lightweight and simple website to
 show as much of them as possible.
 
+[0]:https://aaoth.xyz
+[1]:gemini://aaoth.xyz
+
 ## implementation
 
-i've decided to use [jekyll](https://jekyllrb.com) for this purpose, because
-~~it's fun~~ it's pretty customizable and easy.
+website is built from markdown files by slightly modified [ssg][2] script.
+[rssg][3] script generates rss feed from the blog page.
+both scripts are included in the repository for ease of use.
 
-for my ease of use i added
-[this git hook](https://jekyllrb.com/docs/deployment/automated/)
-to my server-side git repository.
+[2]:https://rgz.ee/ssg.html
+[3]:https://rgz.ee/rssg.html
+
+## history
+
+firstly i've decided to use [jekyll][4] for this website.
+but then i found out that it's fairly complex and adds a lot of unnecessary
+layers of abstraction to my work.
+
+also i used [this git hook][5] on my server-side git repository for
+automatic deployment.
+
+[4]:https://jekyllrb.com
+[5]:https://jekyllrb.com/docs/deployment/automated/
 
 ## license
 
 all site contents are licensed under
-[creative commons attribution share-alike][1] license (see `LICENSE.CC-BY-SA`).
+[creative commons attribution share-alike][6] license (see `LICENSE.CC-BY-SA`).
 
 all supplemental code is licensed under an isc license (see `LICENSE.ISC`).
 
-[1]:https://creativecommons.org/licenses/by-sa/4.0/
+[6]:https://creativecommons.org/licenses/by-sa/4.0/

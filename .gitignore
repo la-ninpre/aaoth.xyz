@@ -1,6 +1,2 @@
-_site/
-.jekyll-cache/
-.jekyll-metadata
-.sass-cache/
-Gemfile.lock
-visual/*/thumbs/
+dst/
+dst_gemini/
