@@ -18,6 +18,14 @@ both scripts are included in the repository for ease of use.
 [2]:https://rgz.ee/ssg.html
 [3]:https://rgz.ee/rssg.html
 
+## dependencies
+
+main dependency is a unix shell, some kind of coreutils (for awk, find, date
+and others). other than that `lowdown` is needed to convert markdown to html and
+gemini.
+
+[lowdown home page](https://kristaps.bsd.lv/lowdown)
+
 ## history
 
 firstly i've decided to use [jekyll][4] for this website.
