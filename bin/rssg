@@ -17,7 +17,7 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #
 set -e
-set -x
+# set -x
 
 [ -z "$RSSG_DATE_IMPL" ] && RSSG_DATE_IMPL="GNU"
 
@@ -120,19 +120,19 @@ rel_to_abs_urls() {
 
 
 date_rfc_822() {
-    _format='+%a, %d %b %Y %H:%M:%S %z'
-    _date="$1"
-    case "$RSSG_DATE_IMPL" in
-        "BSD")
-            _date="$(echo "$1" | tr -cd '[:digit:]')0000"
-            date -j "$_format" "$_date"
-            ;;
-        "GNU")
-            date -d "$_date" "$_format"
-            ;;
-        *)
-            ;;
-    esac
+	_format='+%a, %d %b %Y %H:%M:%S %z'
+	_date="$1"
+	case "$RSSG_DATE_IMPL" in
+		"BSD")
+			_date="$(echo "$1" | tr -cd '[:digit:]')0000"
+			date -j "$_format" "$_date"
+		;;
+		"GNU")
+			date -d "$_date" "$_format"
+		;;
+		*)
+		;;
+		esac
 }
 
 
