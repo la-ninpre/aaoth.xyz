@@ -22,14 +22,14 @@ main() {
 	test -n "$2" || usage
 	test -n "$3" || usage
 	test -n "$4" || usage
-    test -n "$5" || usage
+	test -n "$5" || usage
 	test -d "$1" || no_dir "$1"
 	test -d "$2" || no_dir "$2"
 	test -d "$3" || no_dir "$3"
 
 	src=$(readlink_f "$1")
 	dst=$(readlink_f "$2")
-    gemdst=$(readlink_f "$3")
+	gemdst=$(readlink_f "$3")
 
 	IGNORE=$(
 		if ! test -f "$src/.ssgignore"; then
@@ -48,10 +48,10 @@ main() {
 
 	h_file="$src/_header.html"
 	f_file="$src/_footer.html"
-    gf_file="$src/_gemfooter.gmi"
+	gf_file="$src/_gemfooter.gmi"
 	test -f "$f_file" && FOOTER=$(cat "$f_file") && export FOOTER
 	test -f "$h_file" && HEADER=$(cat "$h_file") && export HEADER
-    test -f "$gf_file" && GEMFOOTER=$(cat "$gf_file") && export GEMFOOTER
+	test -f "$gf_file" && GEMFOOTER=$(cat "$gf_file") && export GEMFOOTER
 
 	list_dirs "$src" |
 		(cd "$src" && cpio -pdu "$dst")
@@ -61,9 +61,9 @@ main() {
 	fs=$(
 		if test -f "$dst/.files"; then
 			list_affected_files "$src" "$dst/.files"
-            if test -f "$gemdst/.files"; then
-                list_affected_files "$src" "$gemdst/.files"
-            fi
+		if test -f "$gemdst/.files"; then
+			list_affected_files "$src" "$gemdst/.files"
+		fi
 		else
 			list_files "$1"
 		fi
@@ -80,10 +80,10 @@ main() {
 				echo "$fs" | grep '\.md$' |
 					render_md_files_lowdown_gemini "$src" "$gemdst"
 
-            else
-                echo "couldn't find lowdown nor Markdown.pl"
-                exit 3
-            fi
+			else
+				echo "couldn't find lowdown nor Markdown.pl"
+				exit 3
+			fi
 		fi
 
 		echo "$fs" | grep '\.html$' |
@@ -199,7 +199,7 @@ render_md_files_lowdown_gemini() {
 			-Tgemini <"$1/$f" |
 			render_gmi_file \
 				>"$2/${f%\.md}.gmi"
-    done
+	done
 }
 
 render_html_file() {
@@ -235,14 +235,14 @@ render_gmi_file() {
 	awk '
 	{ body = body "\n" $0 }
 	END {
-        body = substr(body, 2)
-        n = split(body, body_n, /\n/)
-        for (i = 1; i <= n; i++) {
-            if (!match(body_n[i], /^=>[[:space:]]*[Hh][Tt]{2}[Pp][Ss]?:\/\/.*/)) {
-                sub(/\.html[[:space:]]*/, ".gmi ", body_n[i])
-            }
-            print body_n[i]
-        }
+		body = substr(body, 2)
+		n = split(body, body_n, /\n/)
+		for (i = 1; i <= n; i++) {
+			if (!match(body_n[i], /^=>[[:space:]]*[Hh][Tt]{2}[Pp][Ss]?:\/\/.*/)) {
+				sub(/\.html[[:space:]]*/, ".gmi ", body_n[i])
+		}
+		print body_n[i]
+	}
 		#print body
 		print ENVIRON["GEMFOOTER"]
 	}'
