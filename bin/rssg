@@ -194,7 +194,7 @@ render_feed() {
 <title>'"$title"'</title>
 <description>'"$description"'</description>
 <link>'"$base_url"'/</link>
-<lastBuildDate>'"$(date_rfc_822 date)"'</lastBuildDate>
+<lastBuildDate>'"$(date_rfc_822 $date)"'</lastBuildDate>
 '"$(cat)"'
 </channel></rss>'
 }
