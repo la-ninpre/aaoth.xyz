@@ -64,6 +64,13 @@ if you really want, you can contact me and get an invite.
 
 [dendrite matrix server source code](https://github.com/matrix-org/dendrite)
 
+### xmpp
+
+i have an xmpp server running prosody. if i know you and you need an account,
+contact me to get an invite.
+
+[learn more about xmpp](https://xmpp.org/)
+
 ## other
 
 ### inks
