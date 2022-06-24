@@ -17,7 +17,53 @@ linguistics). i speak russian, speak english a little bit and also toki pona :D
 
 pona tawa sina!
 
-## links
+## contact
+
+how you can contact me? well, here's a list in order of preference
+(and in order of increasing response time probably).
+
+### fediverse
+
+fedi is probably a fastest way to reach me. i have multiple accounts,
+here they are.
+
+* la_ninpre at pleroma dot aaoth dot xyz
+
+* lnpr at bloat dot aaoth dot xyz
+
+* la_ninpre at mstdn dot starnix dot network
+
+* lan_lewa at toki dot social
+
+### email
+
+email is old, but cool. if you want to send a pgp-encrypted message,
+my public key is available down below.
+
+[pgp key 405c2c163ef6a2c9](/pgp.asc)
+
+* aaoth at aaoth dot xyz
+
+### xmpp
+
+xmpp is old too, but it works well. if you want to send me an omemo-encrypted
+message, the list of signed omemo keys is down below. use my pgp key to verify
+the signatures.
+
+[desktom-gajim omemo key](/desktop-gajim.asc)
+
+[android-conversations omemo key](/android-conversations.asc)
+
+* la_ninpre at aaoth dot xyz
+
+### matrix
+
+matrix is a shiny new thing and it kinda works.
+as for now i have my own server so everything could go wrong one day.
+
+* la_ninpre colon aaoth dot xyz
+
+## miscellaneous links
 
 [my github](https://github.com/la-ninpre)
 
