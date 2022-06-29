@@ -50,7 +50,7 @@ xmpp is old too, but it works well. if you want to send me an omemo-encrypted
 message, the list of signed omemo keys is down below. use my pgp key to verify
 the signatures.
 
-[desktom-gajim omemo key](/desktop-gajim.asc)
+[desktop-gajim omemo key](/desktop-gajim.asc)
 
 [android-conversations omemo key](/android-conversations.asc)
 
