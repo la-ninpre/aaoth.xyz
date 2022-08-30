@@ -1,6 +1,11 @@
 # selfhosting
 
-all things `*.aaoth.xyz` that you can use of access.
+all things `*.aaoth.xyz` that you can use of access. using links below you can watch the uptime of these services. note that you will need to enable javascript in order to access the status page.
+
+[status on clearnet](https://aaoth.xyz/status)
+[status on i2p](http://d6it2capj2sh32fx76aszsoo24ckd4zqnilondxnrivifcwekkgq.b32.i2p)
+[status on tor](http://g7zvtzldhlzp5oeph7pmae56lyjrg57zqm6bnhrkjrmolrbaupicgryd.onion)
+[status on yggdrasil](http://[301:cec9:b4fc:5a23::bea4])
 
 ## code
 
