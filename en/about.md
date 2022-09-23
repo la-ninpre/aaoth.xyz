@@ -63,6 +63,16 @@ as for now i have my own server so everything could go wrong one day.
 
 * la_ninpre colon aaoth dot xyz
 
+### irc
+
+i'm barely active on irc, but still you could probably reach me there.
+
+* la-ninpre on libera.chat
+
+* la-ninpre on esper.net
+
+* lnpr on irc.ilita.i2p
+
 ## miscellaneous links
 
 [my github](https://github.com/la-ninpre)
