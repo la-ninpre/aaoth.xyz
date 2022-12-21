@@ -1,6 +1,6 @@
 # selfhosting
 
-all things `*.aaoth.xyz` that you can use of access. blocks of preformatted text
+all things `*.aaoth.xyz` that you can use or access. blocks of preformatted text
 provide configuration options to use with appropriate clients.
 
 ## status
