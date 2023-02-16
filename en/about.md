@@ -22,6 +22,15 @@ pona tawa sina!
 how you can contact me? well, here's a list in order of preference
 (and in order of increasing response time probably).
 
+if you want to send me an encrypted message or verify my signatures on commits
+or files, here are my cryptographic keys.
+
+[pgp key 405c2c163ef6a2c9](/files/crypto/la_ninpre_405c2c163ef6a2c9.asc)
+
+[signify key la_ninpre-2023.pub](/files/crypto/la_ninpre-2023.pub)
+
+[learn more about signify](https://man.openbsd.org/signify)
+
 ### fediverse
 
 fedi is probably a fastest way to reach me. i have multiple accounts,
@@ -33,14 +42,16 @@ here they are.
 
 * la_ninpre at mstdn dot starnix dot network
 
+* la_ninpre at mk dot starnix dot network
+
+* la_ninpre at berserker dot town
+
 * lan_lewa at toki dot social
 
 ### email
 
 email is old, but cool. if you want to send a pgp-encrypted message,
-my public key is available down below.
-
-[pgp key 405c2c163ef6a2c9](/pgp.asc)
+my public key is available above.
 
 * aaoth at aaoth dot xyz
 
@@ -48,13 +59,20 @@ my public key is available down below.
 
 xmpp is old too, but it works well. if you want to send me an omemo-encrypted
 message, the list of signed omemo keys is down below. use my pgp key to verify
-the signatures.
-
-[desktop-gajim omemo key](/desktop-gajim.asc)
-
-[android-conversations omemo key](/android-conversations.asc)
+the signatures. keys signed with signify(1) are in the same locations,
+but with .sig suffix instead of .asc.
 
 * la_ninpre at aaoth dot xyz
+
+[aaothxyz gajim fingerprint](/files/crypto/omemo-aaothxyz-gajim.asc)
+
+[aaothxyz conversations fingerprint](/files/crypto/omemo-aaothxyz-conversations.asc)
+
+* la_ninpre at cryptoschizo dot club
+
+[cryptoshizo gajim fingerprint](/files/crypto/omemo-csc-gajim.asc)
+
+[cryptoschizoclub conversations fingerprint](/files/crypto/omemo-csc-conversations.asc)
 
 ### matrix
 
