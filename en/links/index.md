@@ -4,7 +4,7 @@ here i want to keep a list of links to other websites i find interesting, useful
 
 [devine's wiki, art, permacomputing, aesthetics](https://wiki.xxiivv.com)
 
-[henesy's notes about plan 9, software and documentation mirrors](https://postnix.pw)
+[henesy's notes about plan 9, software and documentation mirrors](http://postnix.pw)
 
 [hundred rabbits, a floating art studio, their sailing notes](https://100r.co)
 

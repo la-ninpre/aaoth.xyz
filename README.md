@@ -15,6 +15,8 @@ website is built from markdown files by slightly modified [ssg][2] script.
 [rssg][3] script generates rss feed from the blog page.
 both scripts are included in the repository for ease of use.
 
+i use a subset of markdown to maintain the ease of convertation to gemtext.
+
 [2]:https://rgz.ee/ssg.html
 [3]:https://rgz.ee/rssg.html
 
