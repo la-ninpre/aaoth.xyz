@@ -17,6 +17,8 @@ linguistics). i speak russian, speak english a little bit and also toki pona :D
 
 pona tawa sina!
 
+[here's a list of links to other people's websites i find interesting](/links/)
+
 ## contact
 
 how you can contact me? well, here's a list in order of preference
