@@ -17,3 +17,6 @@ here i want to keep a list of links to other websites i find interesting, useful
 [drew devault's spicy takes on modern software](https://drewdevault.com)
 
 [cat -v and other harmful things](http://cat-v.org)
+
+[solene's %, openbsd tips, old computer challenge](https://dataswamp.org/~solene)
+
