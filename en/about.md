@@ -38,15 +38,17 @@ or files, here are my cryptographic keys.
 fedi is probably a fastest way to reach me. i have multiple accounts,
 here they are.
 
-* la_ninpre at pleroma dot aaoth dot xyz
+* la_ninpre at merveilles dot town
 
 * lnpr at bloat dot aaoth dot xyz
 
 * la_ninpre at mstdn dot starnix dot network
 
-* la_ninpre at mk dot starnix dot network
+* la_ninpre at lamp dot leemoon dot network
 
 * la_ninpre at berserker dot town
+
+* la_ninpre at mk dot starnix dot network
 
 * lan_lewa at toki dot social
 
@@ -76,13 +78,6 @@ but with .sig suffix instead of .asc.
 
 [cryptoschizoclub conversations fingerprint](/files/crypto/omemo-csc-conversations.asc)
 
-### matrix
-
-matrix is a shiny new thing and it kinda works.
-as for now i have my own server so everything could go wrong one day.
-
-* la_ninpre colon aaoth dot xyz
-
 ### irc
 
 i'm barely active on irc, but still you could probably reach me there.
@@ -95,11 +90,13 @@ i'm barely active on irc, but still you could probably reach me there.
 
 ## miscellaneous links
 
-[my github](https://github.com/la-ninpre)
+[sourcehut](https://sr.ht/~la_ninpre)
 
-[my gitlab](https://gitlab.com/la-ninpre)
+[github](https://github.com/la-ninpre)
 
-[my youtube channel](https://www.youtube.com/channel/UCLW6sGRLddTR-fB-Ae5uv6Q/)
+[gitlab](https://gitlab.com/la-ninpre)
+
+[youtube channel](https://www.youtube.com/channel/UCLW6sGRLddTR-fB-Ae5uv6Q/)
 
 [aaoth's bandcamp](https://aaoth.bandcamp.com)
 
